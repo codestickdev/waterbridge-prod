@@ -45,7 +45,6 @@
 	<?php endif; ?>
 </div>
 <?php wp_body_open(); ?>
-<h1>TESTESTEST</h1>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'waterbridge' ); ?></a>
 
