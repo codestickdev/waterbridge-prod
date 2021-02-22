@@ -1,0 +1,271 @@
+.frontReviews{
+    display: flex;
+    height: 590px;
+    padding: 50px 0;
+    position: relative;
+
+    &--about{
+        height: auto;
+        padding: 180px 0;
+
+        .frontReviews__flag{
+            display: none;
+        }
+        .frontReviews__image{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .frontReviews__content{
+            width: 100%;
+
+            & > h2{
+                font-size: 60px;
+                line-height: 70px;
+                font-weight: 300;
+                color: #0d1727;
+                margin: 0 0 60px;
+                text-align: center;
+
+                b{
+                    font-weight: 500;
+                }
+            }
+            .wrap{
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__flag{
+        width: fit-content;
+        height: 39px;
+        font-size: 16px;
+        line-height: 39px;
+        font-weight: 700;
+        color: #fff;
+        background-color: #C9DB30;
+        padding: 0 20px;
+        border-radius: 0 0 4px 4px;
+        position: absolute;
+        left: 0;
+        top: -1px;
+        pointer-events: none;
+    }
+    &__image{
+        width: 30%;
+        text-align: center;
+        position: relative;
+
+        img{
+            image-rendering: pixelated;
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+    }
+    &__content{
+        width: 70%;
+
+        .wrap{
+            max-width: 810px;
+            margin-right: auto;
+        }
+    }
+    .reviewsSlider{
+        margin-bottom: 120px;
+
+        &__slide{
+            outline: none;
+
+            .wrap{
+                text-align: center;
+                max-width: 580px;
+                margin: 0 auto;
+
+                .thumb{
+                    width: 105px;
+                    height: 105px; 
+                    margin: 0 auto 52px;
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        image-rendering: pixelated;
+                        object-fit: contain;
+                    }
+                }
+                .quote{
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+                .source{
+                    font-size: 16px;
+                    line-height: 19px;
+                    font-weight: 500;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .reviewsDotsSlider{
+        max-width: 700px;
+        margin: 0 auto;
+
+        &__slide{
+            width: 180px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: grayscale(1);
+            transition: ease .3s;
+            outline: none;
+            cursor: pointer;
+
+            &.slick-current{
+                filter: grayscale(0);
+            }
+        }
+    }
+}
+@media (max-width: 1396px){
+    .frontReviews{
+        &--about{
+            .frontReviews__image{
+                img{
+                    top: 150px;
+                    left: 0;
+                    max-width: 240px;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px){
+    .frontReviews{
+        &--about{
+            .frontReviews__image{
+                img{
+                    top: 200px;
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+    .reviewsDotsSlider{
+        max-width: 600px !important;
+
+        .slick-prev{
+            left: -10px;
+        }
+        .slick-next{
+            right: -40px;
+        }
+    }
+}
+@media (max-width: 991px){
+    .frontReviews{
+        &--about{
+            padding: 50px 0 !important;
+            flex-direction: column-reverse !important;
+
+            .frontReviews__image{
+                position: relative;
+                text-align: center;
+                margin-top: 20px;
+                width: 100%;
+
+                img{
+                    position: relative;
+                    top: auto;
+                    left: auto;
+                    right: -10px;
+                }
+            }
+            .frontReviews__content{
+                h2{
+                    font-size: 50px;
+                    line-height: 58px;
+                    margin: 0 0 20px;
+                }
+            }
+            .reviewsSlider{
+                margin: 0 0 40px;
+
+                &__slide{
+                    .wrap{
+                        .thumb{
+                            margin: 0 auto 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .frontReviews{
+        flex-direction: column;
+        height: auto;
+        padding: 0 0 50px;
+
+        &__flag{
+            display: none;
+        }
+
+        &__image{
+            width: 100%;
+
+            img{
+                position: relative;
+                max-width: 200px;
+                top: auto;
+                left: 11px;
+            }
+        }
+        &__content{
+            width: 100%;
+        }
+        .reviewsSlider{
+            margin-bottom: 50px;
+            
+            &__slide{
+                .wrap{
+                    .thumb{
+                        margin: 0 auto 28px;
+                    }
+                }
+            }
+        }
+    }
+    .reviewsDotsSlider{
+        max-width: 230px !important;
+
+        &__slide{
+            width: 120px;
+            opacity: .2;
+            transition: ease .3s;
+
+            &.slick-current{
+                opacity: 1;
+            }
+        }
+
+        .slick-list{
+            overflow: visible;
+        }
+
+        .slick-prev{
+            left: 0;
+            z-index: 10;
+        }
+        .slick-next{
+            right: 0;
+            z-index: 10;
+        }
+    }
+}

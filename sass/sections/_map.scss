@@ -1,0 +1,152 @@
+.contactMap{
+    position: relative;
+    max-height: 614px;
+    height: 100%;
+
+    &--about{
+        .contactMap__agent{
+            display: none;
+        }
+    }
+
+    &__map{
+        max-height: 100%;
+    }
+        
+    &__heading{
+        position: absolute;
+        top: 110px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        pointer-events: none;
+
+        h2{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            color: #fff;
+            margin: 0;
+            text-align: center;
+        }
+    }
+    &__office{
+        display: flex;
+        align-items: center;
+        max-width: 705px;
+        margin: 0 auto;
+        position: absolute;
+        bottom: 110px;
+        left: 0;
+        right: 0;
+        
+        img{
+            max-width: 165px;
+            width: 100%;
+            border-radius: 4px;
+            object-fit: contain;
+            padding-right: 15px;
+            image-rendering: pixelated;
+        }
+        .content{
+            padding-right: 20px;
+
+            p{
+                font-size: 21px;
+                line-height: 25px;
+                font-weight: 300;
+                color: #fff;
+                margin: 0;
+
+                b{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    &__agent{
+        position: relative;
+        top: -29px;
+    }
+}
+@media (max-width: 991px){
+    .contactMap{
+        &__heading{
+            top: 60px;
+
+            h2{
+                font-size: 50px;
+                line-height: 58px;
+            }
+        }
+        &__office{
+            max-width: 615px;
+            bottom: 60px;
+
+            img{
+                max-width: 145px;
+            }
+
+            .content{
+                p{
+                    font-size: 18px;
+                    line-height: 21px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .contactMap{
+        max-height: 420px;
+        margin-bottom: 145px;
+
+        &__map{
+            max-height: 350px;
+            
+            .gmp_MapPreview{
+                height: 350px !important;
+            }
+        }
+
+        &__office{
+            bottom: -125px;
+
+            .content{
+                p{
+                    color: #0d1727;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 650px){
+    .contactMap{
+        margin-bottom: 325px;
+
+        &__heading{
+            top: 20px;
+
+            h2{
+                font-size: 38px;
+                line-height: 48px;
+            }
+        }
+        &__office{
+            flex-direction: column;
+            text-align: center;
+            bottom: -305px;
+
+            img{
+                padding: 0;
+                margin-bottom: 15px;
+            }
+            .content{
+                max-width: 300px;
+                text-align: center;
+                margin-bottom: 15px;
+                padding: 0;
+            }
+        }
+    }
+}

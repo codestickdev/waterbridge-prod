@@ -1,0 +1,217 @@
+// body.page-template-page_about{
+//     #masthead{
+//         position: relative;
+//     }
+// }
+.aboutHeader{
+    padding-top: 145px;
+
+    &__wrap{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image{
+        width: 45%;
+
+        img{
+            max-width: 100%;
+            width: 100%;
+            image-rendering: pixelated;
+            padding-right: 50px;
+        }
+    }
+    &__content{
+        display: flex;
+        width: 55%;
+
+        .wrap{
+            max-width: 520px;
+            text-align: right;
+        }
+        h1{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            color: #0d1727;
+            margin: 0 0 25px;
+
+            b{
+                font-weight: 500;
+            }
+        }
+        p{
+            font-size: 21px;
+            line-height: 25px;
+            font-weight: 400;
+            margin: 0 0 35px;
+            color: #0d1727;
+        }
+    }
+}
+@media (max-width: 991px){
+    .aboutHeader{
+        &__content{
+            h1{
+                font-size: 38px;
+                line-height: 48px;
+                margin: 0 0 15px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 23px;
+                margin: 0 0 25px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .aboutHeader{
+        padding-top: 110px;
+
+        .breadcrumb{
+            padding: 0;
+        }
+        &__wrap{
+            flex-direction: column;
+        }
+        &__image{
+            margin: 0 0 15px;
+            text-align: center;
+
+            img{
+                max-width: 250px;
+                padding: 0;
+            }
+        }
+        &__content{
+            text-align: center;
+            width: 100%;
+
+            .wrap{
+                max-width: none;
+                text-align: center;
+            }
+        }
+    }
+}
+.aboutTeam{
+    margin-bottom: 50px;
+
+    &__content{
+        max-width: 685px;
+        margin: 50px auto 70px;
+        text-align: center;
+
+        h2{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            color: #0d1727;
+            margin: 0 0 20px;
+
+            b{
+                font-weight: 500;
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 400;
+            margin: 0;
+            color: #0d1727;
+        }
+    }
+    &__team{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__person{
+        display: flex;
+        flex-direction: column;
+        width: calc(100% / 3);
+        text-align: center;
+
+        img{
+            max-width: 130px;
+            width: 100%;
+            image-rendering: pixelated;
+            margin: 0 auto 20px;
+        }
+        .name{
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+            margin: 0;
+            color: #0d1727;
+        }
+        .position{
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 400;
+            margin: 0;
+            color: #C9DB30;
+        }
+    }
+}
+@media (max-width: 991px){
+    .aboutTeam{
+        &__content{
+            h2{
+                font-size: 38px;
+                line-height: 48px;
+                margin: 0 0 20px;
+            }
+        }
+        &__person{
+            img{
+                max-width: 100px;
+                margin: 0 auto 15px;
+            }
+            .name{
+                font-size: 16px;
+                line-height: 21px;
+            }
+            .position{
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    }
+}
+@media (max-width: 575px){
+    .aboutTeam{
+        &__content{
+            margin: 40px auto;
+        }
+        &__team{
+            flex-direction: column;
+        }
+        &__person{
+            width: 100%;
+            margin-bottom: 15px;
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+.waterbridge{
+    &--about{
+        .investForm{
+            padding: 150px 15px 100px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .waterbridge{
+        &--about{
+            .investForm{
+                padding: 80px 15px 30px;
+            }
+        }
+    }
+}

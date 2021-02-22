@@ -1,0 +1,216 @@
+.frontReviewsLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 630px;
+    position: relative;
+
+    &--about{
+        display: block;
+        height: auto;
+        margin-top: 100px;
+
+        h2{
+            font-size: 35px;
+            line-height: 41px;
+            font-weight: 300;
+            color: #0D1727;
+            margin: 0 0 50px;
+            text-align: center;
+        }
+        .frontReviewsLogo__contentSlider{
+            display: none;
+        }
+    }
+
+    &__flag{
+        width: fit-content;
+        height: 39px;
+        font-size: 16px;
+        line-height: 39px;
+        font-weight: 500;
+        color: #fff;
+        background-color: #0D1727;
+        padding: 0 20px;
+        border-radius: 0 0 4px 4px;
+        position: absolute;
+        right: 0;
+        top: -1px;
+        pointer-events: none;
+    }
+
+    &__slidersWrap{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+
+        &:before{
+            content: '';
+            width: 30%;
+            height: 50%;
+            background: rgb(255,255,255);
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+        &:after{
+            content: '';
+            width: 30%;
+            height: 50%;
+            background: rgb(255,255,255);
+            background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 1;
+        }
+    }
+
+    &__logoSlider{
+        max-width: 200px;
+        margin: 0 auto 50px;
+
+        .slick-arrow{
+            top: 42%;
+            z-index: 2;
+
+            &.slick-next{
+                right: -12px;
+            }
+            &.slick-prev{
+                left: -12px;
+            }
+        }
+        .slick-list{
+            margin: 0 -20px;
+            overflow: visible;
+        }
+        .slick-slide{
+            margin: 0 20px;
+            filter: grayscale(1);
+            transform: scale(0.5);
+            width: fit-content;
+            transition: ease .3s;
+
+            &.slick-active{
+                transform: scale(0.8);
+            }
+            &.slick-current{
+                filter: grayscale(0);
+                transform: scale(1);
+            }
+        }
+    }
+    &__logoSlide{
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        height: 185px;
+        width: 185px;
+        outline: none;
+
+        img{
+            max-width: 185px;
+            min-width: 150px;
+            width: 100%;
+            image-rendering: pixelated;
+            max-height: 185px;
+        }
+    }
+
+    &__contentSlider{
+        max-width: 570px;
+        margin: 0 auto;
+    }
+    &__contentSlide{
+        padding: 0 20px;
+        text-align: center;
+        outline: none;
+
+        p{
+            font-size: 16px;
+            line-height: 19px;
+            color: #6C6C6C;
+            margin: 0 0 15px;
+
+            &.author{
+                font-weight: 500;
+                color: #0D1727;
+                margin: 0 0 5px;
+            }
+            &.source{
+                font-weight: 500;
+                color: #C9DB30;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .frontReviewsLogo{
+        flex-direction: column;
+        height: 450px;
+
+        &--about{
+            height: auto;
+
+            .frontReviewsLogo__slidersWrap{
+                &:before,
+                &:after{
+                    height: 140px;
+                }
+            }
+        }
+
+        &__flag{
+            position: relative;
+            background-color: transparent;
+            font-size: 32px;
+            line-height: 42px;
+            margin: 0 0 10px;
+            text-align: center;
+            color: #0D1727;
+            font-weight: 300;
+        }
+
+        &__logoSlider{
+            margin: 0 auto;
+
+            .slick-prev{
+                left: 0 !important;
+            }
+            .slick-next{
+                right: 0 !important;
+            }
+        }
+        &__logoSlide{
+            img{
+                max-width: 135px;
+                min-width: 110px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .frontReviewsLogo{
+        &--about{
+            margin-top: 50px;
+
+            .frontReviewsLogo__slidersWrap{
+                &:before,
+                &:after{
+                    height: 140px;
+                }
+            }
+    
+            h2{
+                font-size: 23px;
+                line-height: 30px;
+                margin: 0;
+            }
+        }
+    }
+}

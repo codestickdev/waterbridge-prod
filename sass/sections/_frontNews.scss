@@ -1,0 +1,31 @@
+.frontNews{
+    display: flex;
+    padding: 80px 0;
+
+    &__wrap{
+        position: relative;
+
+        &::before{
+            content: '';
+            background-image: url('/wp-content/themes/waterbridge/images/front_news_bg.svg');
+            background-repeat: no-repeat;
+            background-size: 35px;
+            width: 35px;
+            height: 75px;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -40px;
+        }
+    }
+}
+@media (max-width: 991px){
+    .frontNews{
+        padding: 40px 0;
+    }
+}
+@media (max-width: 767px){
+    .frontNews{
+        flex-direction: column;
+    }
+}

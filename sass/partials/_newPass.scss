@@ -1,0 +1,67 @@
+.wbNewPass{
+    .popupTitle{
+        &.errorToggle{
+            margin: 0 0 10px;
+            
+            &:after{
+                position: relative;
+                display: block;
+                padding: 3px 20px;
+                font-size: 12px;
+                line-height: 14px;
+                color: #fff;
+                background-color: #cc5050;
+                margin: 20px auto 0;
+                border-radius: 5px;
+                text-align: center;
+                max-width: -webkit-fit-content;
+                max-width: -moz-fit-content;
+                max-width: fit-content;
+            }
+        }
+        &.errorToggle--empty{
+            &:after{
+                content: 'Pola nie mogą być puste.';
+            }
+        }
+        &.errorToggle--notValid{
+            &:after{
+                content: 'Wprowadzone hasła nie są takie same.';
+            }
+        }
+    }
+    &__form{
+        width: 525px;
+        margin: 0 auto;
+
+        .errorTable{
+            display: block;
+            padding: 3px 20px;
+            font-size: 12px;
+            color: #fff;
+            background-color: #cc5050;
+            margin: 10px auto;
+            border-radius: 5px;
+            text-align: center;
+
+            &.success{
+                background-color: unset !important;
+                color: #C9DB30 !important;
+            }
+        }
+    }
+    &__confirm{
+        display: none;
+
+        &.toggle{
+            display: block;
+        }
+        
+        p{
+            font-size: 20px;
+            line-height: 24px;
+            color: #C9DB30;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.registerForm{
+    margin-top: 30px;
+    max-width: 525px;
+
+    &--errorEmail{
+        &:before{
+            content: 'Podany adres email został juz zarejestrowany!';
+            position: relative;
+            display: block;
+            padding: 3px 20px;
+            font-size: 12px;
+            color: #fff;
+            background-color: #cc5050;
+            margin: 10px auto;
+            border-radius: 5px;
+            text-align: center;
+            max-width: fit-content;
+        }
+    }
+    .input{
+        margin-bottom: 10px;
+    }
+    .formCheckbox{
+        text-align: center;
+        margin: 20px 0 30px;
+    }
+    .formSubmit{
+        text-align: center;
+    }
+}
+.loginInfo{
+    margin-top: 30px;
+    text-align: center;
+
+    p{
+        font-size: 20px;
+        line-height: 24px;
+        color: #000;
+        font-weight: 500;
+        margin: 0;
+    }
+    &__btn{
+        font-weight: 300 !important;
+        color: #C9DB30 !important;
+        cursor: pointer;
+        transition: ease .3s;
+
+        &:hover{
+            opacity: .7 !important;
+        }
+    }
+}

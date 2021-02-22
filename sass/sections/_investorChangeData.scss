@@ -1,0 +1,56 @@
+.investorChangeData{
+    &__content{
+        max-width: 760px;
+        margin: 40px auto 20px;
+
+        h2{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            margin: 0 0 30px;
+            color: #0D1727;
+            text-align: center;
+        }
+        p{
+            font-size: 21px;
+            line-height: 26px;
+            color: #0D1727;
+            margin: 0 0 20px;
+            text-align: center;
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+
+            a{
+                color: #C9DB30;
+                text-decoration: none;
+
+                &:hover{
+                    filter: grayscale(1);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .investorChangeData{
+        &__content{    
+            max-width: 500px;
+            padding: 0 15px;
+            
+            h2{
+                font-size: 38px;
+                line-height: 48px;
+                margin: 0 0 30px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 21px;
+                color: #0D1727;
+                margin: 0 0 20px;
+                text-align: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+// body.page-template-page_contact{
+//     #masthead{
+//         position: relative;
+//     }
+// }
+
+.contactHeading{
+    padding-top: 145px;
+    margin: 0 auto 70px;
+
+    &__content{
+        h1{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            margin: 0 0 60px;
+            color: #0D1727;
+            text-align: center;
+    
+            b{
+                font-weight: 500;
+            }
+        }
+    }
+    &__persons{
+        text-align: center;
+
+        img{
+            image-rendering: pixelated;
+            margin-bottom: 20px;
+        }
+        .person{
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 600;
+            color: #0D1727;
+            margin: 0;
+        }
+        .position{
+            font-size: 20px;
+            line-height: 24px;
+            color: #C9DB30;
+            margin: 0;
+        }
+    }
+    &__contact{
+        text-align: center;
+        margin: 60px 0 0;
+
+        .btn{
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 19px;
+            color: #0D1727;
+            margin: 0;
+
+            a{
+                color: #C9DB30;
+                text-decoration: none;
+
+                &:hover{
+                    filter: grayscale(1);
+                }
+            }
+        }
+    }
+}
+.waterbridge{
+    &--contact{
+        .investForm{
+            padding: 150px 0 100px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .contactHeading{
+        padding-top: 115px;
+
+        .breadcrumb{
+            padding: 0;
+        }
+
+        &__content{
+            h1{
+                font-size: 38px;
+                line-height: 48px;
+                margin: 0 0 40px;
+            }
+        }
+        &__persons{
+            .person{
+                font-size: 16px;
+                line-height: 21px;
+            }
+            .position{
+                font-size: 16px;
+                line-height: 21px;
+            }
+        }
+    }
+    .waterbridge{
+        &--contact{
+            .investForm{
+                padding: 80px 15px 30px;
+            }
+        }
+    }
+}

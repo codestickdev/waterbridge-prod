@@ -1,0 +1,88 @@
+.frontAbout{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 670px;
+
+    &__container{
+        position: relative;
+
+        &::after{
+            content: '';
+            background-image: url('/wp-content/themes/waterbridge/images/front_about_after.svg');
+            background-repeat: no-repeat;
+            background-size: 280px;
+            width: 280px;
+            height: 370px;
+            position: absolute;
+            right: 0;
+            top: -90px;
+        }
+        &::before{
+            content: '';
+            background-image: url('/wp-content/themes/waterbridge/images/front_about_before.svg');
+            background-repeat: no-repeat;
+            background-size: 220px;
+            width: 220px;
+            height: 340px;
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+        }
+    }
+
+    &__wrap{
+        height: fit-content;
+        width: 520px;
+        text-align: center;
+
+        h2{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            color: #0D1727;
+            margin: 0 0 30px;
+
+            b{
+                font-weight: 500;
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 19px;
+            font-weight: 400;
+            color: #0D1727;
+            margin: 0 0 30px;
+        }
+    }
+}
+@media (max-width: 767px){
+    .frontAbout{
+        height: 470px;
+        
+        &__container{
+            &::before{
+                background-size: 220px;
+                width: 220px;
+                height: 310px;
+            }
+            &::after{
+                background-size: 160px;
+                width: 160px;
+                height: 280px;
+            }
+        }
+        &__wrap{
+            h2{
+                font-size: 38px;
+                line-height: 48px;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 18px;
+                margin: 0 0 20px;
+            }
+        }
+    }
+}

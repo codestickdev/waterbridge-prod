@@ -1,0 +1,31 @@
+.pageLoader{
+    position: fixed;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    background-color: #0D1727;
+    display: block;
+    top: 0;
+    left: 0;
+    transition: ease .5s;
+
+    &__wrap{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            max-width: 250px;
+            width: 100%;
+        }
+    }
+
+    &--hidden{
+        opacity: 0;
+        pointer-events: none;
+    }
+}

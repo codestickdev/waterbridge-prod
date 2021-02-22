@@ -1,0 +1,95 @@
+.wbPopup__login{
+    max-width: 525px;
+
+    &.error{
+        #loginform{
+            &:before{
+                content: 'Wprowadzono nieprawidłowy login lub hasło';
+                position: relative;
+                display: block;
+                padding: 3px 20px;
+                font-size: 12px;
+                color: #fff;
+                background-color: #cc5050;
+                margin: 10px auto;
+                border-radius: 5px;
+                text-align: center;
+                max-width: fit-content;
+            }
+        }
+    }
+    
+    form{
+        .login-submit{
+            text-align: center;
+        }
+        .actionFields{
+            display: flex;
+            max-width: 300px;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px auto;
+
+            p{
+                margin: 0;
+            }
+            .forgot-pass{
+                cursor: pointer;
+                
+                a{
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #6C6C6C !important;
+                    text-decoration: none;
+                    position: relative;
+                    transition: ease .3s;
+
+                    &:hover{
+                        opacity: .7;
+                    }
+
+                    span{
+                        display: flex;
+                        align-items: center;
+
+                        &:before{
+                            content: '';
+                            background-image: url('/wp-content/themes/waterbridge/images/icons/lock_ico.svg');
+                            background-repeat: no-repeat;
+                            background-size: 24px;
+                            width: 24px;
+                            height: 24px;
+                            position: relative;
+                            display: inline-block;
+                            margin-right: 5px;
+                            top: -1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .registerInfo{
+        margin-top: 30px;
+        text-align: center;
+
+        p{
+            font-size: 20px;
+            line-height: 24px;
+            color: #000;
+            font-weight: 500;
+            margin: 0;
+        }
+        &__btn{
+            font-weight: 300 !important;
+            color: #C9DB30 !important;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &:hover{
+                opacity: .7 !important;
+            }
+        }
+    }
+}

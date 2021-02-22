@@ -1,0 +1,61 @@
+
+.projectSlider{
+    position: relative;
+
+    &:before{
+        content: '';
+        background-image: url('/wp-content/themes/waterbridge/images/frontProjects_before.svg');
+        background-repeat: no-repeat;
+        background-size: 400px;
+        width: 400px;
+        height: 220px;
+        position: absolute;
+        bottom: -150px;
+        left: 20px;
+    }
+
+    &__wrap{
+        padding-bottom: 45px;
+    }
+    
+    .projectSliderList{
+        .slick-list{
+            margin: 0 -8px;
+        }
+        .slick-slide{
+            margin: 0 8px;
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .projectSliderList{
+        .slick-list{
+            overflow: visible;
+        }
+        .slick-arrow{
+            display: none !important;
+        }
+    }
+}
+@media (min-width: 991px) and (max-width: 1430px){
+    .projectSliderList{
+        .slick-prev{
+            left: -38px;
+        }
+        .slick-next{
+            right: -38px;
+        }
+    }
+}
+@media (max-width: 500px){
+    .slick-dots{
+        margin: 30px auto 0;
+        li{
+            button{
+                width: 30px;
+                height: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+.ebook{
+    display: flex;
+    padding: 50px 0;
+    height: 590px;
+    position: relative;
+
+    &--archive{
+        margin: 100px auto;
+        border-bottom: 0;
+
+        .btnAgent{
+            display: none;
+        }
+    }
+
+    &__content{
+        display: flex;
+        align-self: center;
+        width: 45%;
+        text-align: left;
+        justify-content: flex-end;
+
+        .wrap{
+            max-width: 470px;
+            width: 100%;
+            margin-right: 20px;
+        }
+
+        h2{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            color: #0D1727;
+            margin: 0 0 25px;
+        }
+        p{
+            font-size: 21px;
+            line-height: 25px;
+            font-weight: 400;
+            color: #0D1727;
+            margin: 0 0 25px;
+
+            b{
+                font-weight: 700;
+            }
+        }
+    }
+    &__image{
+        width: 55%;
+
+        img{
+            width: 100%;
+            image-rendering: pixelated;
+            position: relative;
+            top: -20px;
+        }
+    }
+    .btnAgent{
+        position: absolute;
+        left: 0;
+        bottom: -28px;
+    }
+}
+
+@media (max-width: 1200px){
+    .ebook{
+        height: 500px;
+        margin: 50px auto;
+    }
+}
+@media (max-width: 991px){
+    .ebook{
+        height: 350px;
+        padding: 0;
+        margin: 0 auto 50px;
+
+        &__content{
+            h2{
+                font-size: 38px;
+                line-height: 48px;
+                margin: 0 0 15px;
+            }
+            p{
+                font-size: 18px;
+                line-height: 23px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .ebook{
+        height: auto;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        &__content{
+            width: 100%;
+            text-align: center;
+            padding: 0 15px;
+
+            .wrap{
+                max-width: 100%;
+                width: 100%;
+                margin: 0;
+            }
+        }
+        &__image{
+            width: 100%;
+            margin-bottom: 10px;
+            text-align: center;
+
+            img{
+                top: auto;
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+        }
+        .btnAgent{
+            position: relative;
+            bottom: auto;
+            left: auto;
+            margin-top: 20px;
+        }
+    }
+}

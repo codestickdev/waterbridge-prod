@@ -1,0 +1,267 @@
+.wbInvest{
+    &__content{
+        max-width: 340px;
+        margin: 0 auto;
+
+        &.hide{
+            display: none;
+        }
+        form{
+            h3{
+                font-size: 35px;
+                line-height: 42px;
+                font-weight: 300;
+                color: #0D1727;
+                margin: 0 0 30px;
+                text-align: center;
+            }
+            
+            p{
+                text-align: center;
+                margin: 0;
+
+                &.info{
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #6C6C6C;
+                    margin: 20px 0 30px;
+                }
+            }
+            input[type="submit"]{
+                display: inline-block;
+                width: fit-content !important;
+                height: 39px !important;
+                font-size: 16px;
+                color: #fff !important;
+                font-weight: 500;
+                line-height: 1 !important;
+                background-color: #C9DB30 !important;
+                border: 0 !important;
+                padding: 0 20px !important;
+                outline: none !important;
+                border-radius: 90px !important;
+                cursor: pointer;
+                transition: ease .3s;
+
+                &:hover{
+                    background-color: #d9e574 !important;
+                }
+                &.disable{
+                    filter: grayscale(1);
+                    pointer-events: none;
+                }
+            }
+            .ajax-loader{
+                display: block !important;
+                margin: 5px auto 0 !important;
+            }
+        }
+    }
+    &__input{
+        position: relative;
+        text-align: center;
+
+        br{
+            display: none;
+        }
+
+        #investValueInputToSend{
+            width: 300px;
+            height: 80px;
+            background: #E7E8E9;
+            border: 1px solid transparent;
+            border-radius: 90px;
+            font-size: 16px;
+            font-weight: 400;
+            color: #0D1727;
+            outline: none;
+            padding: 0 80px;
+            transition: ease .3s;
+
+            &:focus{
+                border-color: #C9DB30;
+            }
+        }
+        .investValueInput,
+        #investFormUserEmail,
+        #investFormProjectName,
+        #investFormUserName,
+        #investFormUserID,
+        #investFormProjectID{
+            display: none;
+        }
+        
+        &--plus,
+        &--minus{
+            position: absolute;
+            z-index: 2;
+            right: 90px;
+            width: 20px;
+            height: 10px;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &::after{
+                content: '';
+                background-image: url('/wp-content/themes/waterbridge/images/icons/inputArrow.svg');
+                background-repeat: no-repeat;
+                background-size: 12px;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                top: 1px;
+            }
+            &:hover{
+                opacity: .7;
+            }
+        }
+        &--minus{
+            bottom: 25px;          
+        }
+        &--plus{
+            bottom: 45px;
+
+            &:after{
+                transform: rotate(-180deg);
+                top: -3px;
+            }  
+        }
+    }
+    &__summary{
+        margin-bottom: 30px;
+
+        p{
+            font-size: 35px;
+            line-height: 42px;
+            font-weight: 300;
+            color: #0D1727;
+            margin: 0 0 5px;
+
+            &.value{
+                margin: 0;
+                color: #C9DB30;
+            }
+        }
+    }
+    &__success{
+        display: none;
+        text-align: center;
+
+        h3{
+            font-size: 35px;
+            line-height: 42px;
+            font-weight: 300;
+            color: #0D1727;
+            margin: 0 0 30px;
+        }
+        p{
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 300;
+            color: #0D1727;
+            margin: 0 0 30px;
+        }
+
+        .successAction{
+            display: flex;
+            justify-content: center;
+
+            .btn{
+                display: flex;
+                align-items: center;
+                margin: 0 5px;
+
+                &--white{
+                    border: 1px solid #0d1727;
+
+                    span{
+                        transition: ease .3s;
+                    }
+
+                    &:hover{
+                        background-color: #0d1727;
+
+                        span{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.toggle{
+            display: block !important;
+        }
+    }
+}
+@media (max-width: 767px){
+    .wbInvest{
+        &__content{
+            form{
+                h3{
+                    font-size: 20px;
+                    line-height: 24px;
+                    margin: 0 0 20px;
+                }
+                p.info{
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin: 15px 0 20px;
+                }
+            }
+        }
+        &__input{
+            #investValueInputToSend{
+                width: 260px;
+                height: 60px;
+
+            }
+            &--plus,
+            &--minus{
+                right: 60px;
+            }
+            &--plus{
+                bottom: 35px;
+            }
+            &--minus{
+                bottom: 15px;
+            }
+        }
+        &__summary{
+            margin-bottom: 20px;
+
+            p{
+                font-size: 25px;
+                line-height: 35px;
+            }
+        }
+        &__success{
+            padding: 0 15px;
+            
+            h3{
+                font-size: 24px;
+                line-height: 32px;
+                margin: 0 0 20px;
+            }
+            p{
+                font-size: 16px;
+                line-height: 19px;
+                margin: 0 0 20px;
+            }
+
+            .successAction{
+                flex-direction: column;
+                align-items: center;
+
+                .btn{
+                    &--white{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

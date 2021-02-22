@@ -1,0 +1,78 @@
+.slick-arrow{
+    position: absolute;
+    top: 30%;
+    font-size: 0;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    transition: ease .3s;
+
+    &:hover{
+        opacity: .7;
+    }
+    &:focus{
+        border: 0;
+        outline: none;
+    }
+}
+.slick-prev{
+    left: -50px;
+
+    &:before{
+        content: '';
+        background-image: url('/wp-content/themes/waterbridge/images/icons/prev_ico.svg');
+        background-repeat: no-repeat;
+        background-size: 29px;
+        width: 29px;
+        height: 29px;
+        display: block;
+    }
+}
+.slick-next{
+    right: -50px;
+
+    &:before{
+        content: '';
+        background-image: url('/wp-content/themes/waterbridge/images/icons/next_ico.svg');
+        background-repeat: no-repeat;
+        background-size: 29px;
+        width: 29px;
+        height: 29px;
+        display: block;
+    }
+}
+.slick-dots{
+    display: flex;
+    width: fit-content;
+    margin: 45px auto 0;
+    padding: 0;
+    list-style: none;
+
+    li{
+        line-height: 0;
+
+        button{
+            font-size: 0;
+            background: #0000001a;
+            border: 0;
+            border-radius: 2px;
+            outline: none;
+            width: 60px;
+            height: 10px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &:focus{
+                outline: none;
+                border: 0;
+            }
+        }
+        &.slick-active{
+            button{
+                background-color: #C9DB30;
+            }
+        }
+    }
+}

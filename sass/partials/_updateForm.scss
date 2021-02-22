@@ -1,0 +1,30 @@
+.updateForm{
+    margin-top: 30px;
+    max-width: 525px;
+    
+    &--errorEmail{
+        &:before{
+            content: 'Podany adres email został juz zarejestrowany!';
+            position: relative;
+            display: block;
+            padding: 3px 20px;
+            font-size: 12px;
+            color: #fff;
+            background-color: #cc5050;
+            margin: 10px auto;
+            border-radius: 5px;
+            text-align: center;
+            max-width: fit-content;
+        }
+    }
+    .input{
+        margin-bottom: 10px;
+    }
+    .formCheckbox{
+        text-align: center;
+        margin: 20px 0 30px;
+    }
+    .formSubmit{
+        text-align: center;
+    }
+}

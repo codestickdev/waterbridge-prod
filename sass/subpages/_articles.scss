@@ -1,0 +1,43 @@
+// body.page-template-page_articles{
+//     #masthead{
+//         position: relative;
+//     }
+// }
+
+.archiveHeading{
+    padding-top: 145px;
+
+    &__content{
+        padding: 0 0 165px;
+
+        h1{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            margin: 0 0 20px;
+            color: #0D1727;
+            text-align: center;
+
+            b{
+                font-weight: 500;
+            }
+        }
+        p{
+            font-size: 21px;
+            line-height: 25px;
+            font-weight: 300;
+            color: #0D1727;
+            margin: 0 auto;
+            text-align: center;
+            max-width: 485px;
+        }
+    }
+}
+.archiveArticles{
+    display: flex;
+    flex-wrap: wrap;
+
+    .news{
+        margin-bottom: 57px;
+    }
+}

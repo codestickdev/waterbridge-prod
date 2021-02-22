@@ -1,0 +1,120 @@
+.projectStatusTile{
+    display: flex;
+    background-color: #C9DB30;
+    border-radius: 90px;
+    position: absolute;
+    top: 0;
+    padding: 0 40px;
+    height: 78px;
+
+    @media (min-width: 767px){
+        &--maxLeft{
+            border-radius: 4px 90px 90px 4px;
+        }
+        &--maxRight{
+            border-radius: 90px 4px 4px 90px;
+        }
+    }
+    &--toTop{
+        top: 30px;
+    }
+
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 23px;
+
+        p{
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            color: #0D1727;
+            margin: 0;;
+
+            &.status{
+                color: #6C6C6C;
+                font-weight: 400;
+            }
+        }
+    }
+    &__investors{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            max-width: 18px;
+            margin-right: 4px;
+            filter: brightness(0);
+        }
+        p{
+            font-size: 16px;
+            font-weight: 500;
+            color: #0D1727;
+            margin: 0;
+        }
+    }
+}
+@media (max-width: 767px){
+    .projectStatusTile{
+        position: relative;
+        top: 25px !important;
+        left: 0 !important;
+        right: 0 !important;
+        border-radius: 20px;
+
+        &__info{
+            width: 50%;
+            margin: 0;
+        }
+        &__investors{
+            width: 50%;
+            justify-content: flex-end;
+        }
+    }
+}
+@media (max-width: 575px){
+    .projectStatusTile{
+        flex-direction: column;
+        height: auto;
+        padding: 15px 40px;
+
+        &__info{
+            width: 100%;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        &__investors{
+            width: 100%;
+            justify-content: center;
+        }
+    }
+}
+.projectStatusArrow{
+    position: absolute;
+    left: 0;
+    width: 28px;
+    height: 28px;
+
+    img{
+        max-width: 30px;
+        width: 30px;
+        margin-left: -14px;
+        position: absolute;
+    }
+
+    &--toBottom{
+        top: -34px;
+    }
+    &--toTop{
+        bottom: -34px;
+    }
+}
+@media (max-width: 767px){
+    .projectStatusArrow{
+        &--toBottom{
+            top: 21px !important;
+        }
+    }
+}

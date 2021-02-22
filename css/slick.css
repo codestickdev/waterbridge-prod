@@ -1,0 +1,88 @@
+.slick-arrow {
+  position: absolute;
+  top: 30%;
+  font-size: 0;
+  background: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.slick-arrow:hover {
+  opacity: .7;
+}
+
+.slick-arrow:focus {
+  border: 0;
+  outline: none;
+}
+
+.slick-prev {
+  left: -50px;
+}
+
+.slick-prev:before {
+  content: '';
+  background-image: url("/wp-content/themes/waterbridge/images/icons/prev_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 29px;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.slick-next {
+  right: -50px;
+}
+
+.slick-next:before {
+  content: '';
+  background-image: url("/wp-content/themes/waterbridge/images/icons/next_ico.svg");
+  background-repeat: no-repeat;
+  background-size: 29px;
+  width: 29px;
+  height: 29px;
+  display: block;
+}
+
+.slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 45px auto 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slick-dots li {
+  line-height: 0;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  background: #0000001a;
+  border: 0;
+  border-radius: 2px;
+  outline: none;
+  width: 60px;
+  height: 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.slick-dots li button:focus {
+  outline: none;
+  border: 0;
+}
+
+.slick-dots li.slick-active button {
+  background-color: #C9DB30;
+}
+/*# sourceMappingURL=slick.css.map */

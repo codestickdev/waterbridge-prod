@@ -1,0 +1,163 @@
+.investForm{
+    &--logged{
+        margin-bottom: 80px;
+    }
+    &__heading{
+        text-align: center;
+        margin: 0 0 30px;
+
+        h2{
+            font-size: 60px;
+            line-height: 70px;
+            font-weight: 300;
+            margin: 0 0 20px;
+            color: #0D1727;
+
+            b{
+                font-weight: 500;
+            }
+        }
+        p{
+            font-size: 16px;
+            line-height: 19px;
+            color: #0D1727;
+            margin: 0;
+        }
+        a{
+            margin-top: 30px;
+        }
+    }
+    &__form{
+        max-width: 525px;
+        margin: 50px auto 60px;
+
+        .nf-form-fields-required,
+        .ninja-forms-req-symbol{
+            display: none;
+        }
+
+        .nf-field-container{
+            margin-bottom: 10px;
+        }
+        .nf-error-msg{
+            font-size: 14px;
+            text-align: center;
+            margin: 0;
+        }
+        input:not([type="checkbox"]):not([type="button"]){
+            width: 100% !important;
+            height: 59px !important;
+            background-color: rgba(13, 23, 39, 0.1);
+            border: 0 !important;
+            padding: 0 !important;
+            font-size: 16px !important;
+            border-radius: 90px !important;
+            text-align: center;
+            outline: none !important;
+
+            &::placeholder{
+                color: #0D1727;
+            }
+        }
+        .checkbox-container{
+            text-align: center;
+            margin: 55px 10px 36px;
+
+            .nf-after-field,
+            .nf-error{
+                width: 100%;
+                margin: 0;
+            }
+
+            label{
+                font-size: 12px;
+                line-height: 14px;
+                font-weight: 400;
+                color: #6c6c6c;
+                cursor: pointer;
+            }
+            .nf-field-element{
+                width: 20px;
+                height: 20px;
+                position: relative;
+
+                input{
+                    width: 20px;
+                    height: 20px;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+
+                &:before{
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    border: 1px solid #a9a9a9;
+                    border-radius: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 1;
+                    pointer-events: none;
+                    opacity: 1;
+                    transition: ease .1s;
+                }
+                &:after{
+                    content: '';
+                    background-image: url('/wp-content/themes/waterbridge/images/icons/form_checkbox.svg');
+                    background-size: 20px;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 2;
+                    pointer-events: none;
+                    opacity: 0;
+                    transition: ease .1s;
+                }
+                &.nf-checked:before{
+                    opacity: 0;
+                }
+                &.nf-checked:after{
+                    opacity: 1;
+                }
+            }
+        }
+        .submit-container{
+            .nf-field-element{
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .investForm{
+        padding: 0 15px;
+        
+        &__heading{
+            h2{
+                font-size: 38px;
+                line-height: 48px;
+            }
+            p{
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+@media (max-width: 500px){
+    .investForm{
+        &__form{
+            input:not([type="checkbox"]):not([type="button"]){
+                height: 49px;
+                font-size: 14px;
+            }
+            .checkbox-container{
+                margin: 30px 10px 20px;
+            }
+        }
+    }
+}
