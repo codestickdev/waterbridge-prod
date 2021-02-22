@@ -614,24 +614,6 @@ $(document).ready(function(){
     // }
 });
 
-/* ---- LOGGED ACTIONS ---- */
-
-$(document).ready(function(){
-
-    if($('body').hasClass('logged-in')){
-        var username = $('body').attr('username');
-        var logout = $('body').attr('logout');
-        var signin = $('#masthead .menu .sign-in a');
-        var signup = $('#masthead .menu .sign-up a');
-
-        signin.text(username).addClass('logged').attr('href', 'http://app.waterbridge.pl/');
-        signup.text('Wyloguj się').attr('href', logout);
-
-        signin.parent().removeClass('openPopup-login');
-        signup.parent().removeClass('openPopup-register');
-    }
-});
-
 /* ---- FORM POPUP ---- */
 
 $(document).ready(function(){
@@ -926,8 +908,14 @@ $(document).ready(function(){
     var signin = $('#masthead .menu .sign-in a');
     var signup = $('#masthead .menu .sign-up a');
 
+    var footerSignin = $('.pageFooter__menu').find('.sign-in');
+    var footerSignup = $('.pageFooter__menu').find('.sign-up');
+
     if($('body').hasClass('logged-in')){
         signin.text(username).removeClass('openPopup-login').addClass('logged').attr('href', 'http://app.waterbridge.pl/');
         signup.text('Wyloguj się').removeClass('openPopup-register').attr('href', logout);
+
+        footerSignin.hide();
+        footerSignup.hide();
     }
 });

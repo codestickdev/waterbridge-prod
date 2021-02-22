@@ -50,8 +50,8 @@
 
 	<header id="masthead" class="siteHeader <?php if ( is_front_page() ) : ?>siteHeader--frontPage <?php else: ?>siteHeader--subpage <?php endif; ?>container">
 		<div class="siteHeader__logo">
-			<a href="http://waterbridge.pl/" rel="home" class="logo_dark"><img src="/wp-content/themes/waterbridge-prod/images/logo.svg"/></a>
-			<a href="http://waterbridge.pl/" rel="home" class="logo_white"><img src="/wp-content/themes/waterbridge-prod/images/logo_white.svg"/></a>
+			<a href="<?php echo home_url(); ?>" rel="home" class="logo_dark"><img src="/wp-content/themes/waterbridge-prod/images/logo.svg"/></a>
+			<a href="<?php echo home_url(); ?>" rel="home" class="logo_white"><img src="/wp-content/themes/waterbridge-prod/images/logo_white.svg"/></a>
 		</div>
 		<nav id="site-navigation" class="main-navigation siteHeader__menu">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
