@@ -50,6 +50,7 @@
 
 	<header id="masthead" class="siteHeader <?php if ( is_front_page() ) : ?>siteHeader--frontPage <?php else: ?>siteHeader--subpage <?php endif; ?>container">
 		<div class="siteHeader__logo">
+			<p>test</p>
 			<a href="http://waterbridge.pl/" rel="home" class="logo_dark"><img src="/wp-content/themes/waterbridge-prod/images/logo.svg"/></a>
 			<a href="http://waterbridge.pl/" rel="home" class="logo_white"><img src="/wp-content/themes/waterbridge-prod/images/logo_white.svg"/></a>
 		</div>
