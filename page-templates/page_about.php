@@ -12,7 +12,7 @@ get_header(); ?>
         </div>
         <div class="aboutHeader__wrap">
             <div class="aboutHeader__image">
-                <img src="/wp-content/themes/waterbridge/images/about/heading_mockups.png"/>
+                <img src="/wp-content/themes/waterbridge-prod/images/about/heading_mockups.png"/>
             </div>
             <div class="aboutHeader__content">
                 <div class="wrap">

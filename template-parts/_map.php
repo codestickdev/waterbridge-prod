@@ -4,7 +4,7 @@
         <h2>Nasze biuro</h2>
     </div>
     <div class="contactMap__office">
-        <img src="/wp-content/themes/waterbridge/images/office_image.png" />
+        <img src="/wp-content/themes/waterbridge-prod/images/office_image.png" />
         <div class="content">
             <p>
                 <b>Waterbridge Sp. z o. o.</b><br />
@@ -16,9 +16,9 @@
     </div>
     <div class="contactMap__agent container">
         <a href="#" class="btnAgent">
-            <img class="agent" src="/wp-content/themes/waterbridge/images/icons/agent_ico.png" />
+            <img class="agent" src="/wp-content/themes/waterbridge-prod/images/icons/agent_ico.png" />
             <span>Potrzebujesz pomocy?</br />Nasz agent jest on-line</span>
-            <img class="tel" src="/wp-content/themes/waterbridge/images/icons/agent_tel_ico.svg" />
+            <img class="tel" src="/wp-content/themes/waterbridge-prod/images/icons/agent_tel_ico.svg" />
         </a>
     </div>
 </section>

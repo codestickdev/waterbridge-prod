@@ -42,7 +42,7 @@ get_header(); ?>
             <div class="projectsFilter__filter">
                 <p class="projectsFilter__secTitle">Filtruj według:</p>
                 <div class="filterRow filterRow--value">
-                    <p><span class="value">Wartość inwestycji</span> <img src="/wp-content/themes/waterbridge/images/icons/filter_ico.svg"/></p>
+                    <p><span class="value">Wartość inwestycji</span> <img src="/wp-content/themes/waterbridge-prod/images/icons/filter_ico.svg"/></p>
                     <div class="filterDropdown dropdown">
                         <label class="amount amount--from">Koszt inwestycji od: <input type="text" id="valFrom" value="10 PLN" /></label>
                         <label class="amount amount--to">Koszt inwestycji do: <input type="text" id="valTo" value="100 PLN" /></label>
@@ -50,7 +50,7 @@ get_header(); ?>
                     </div>
                 </div>
                 <div class="filterRow filterRow--location">
-                    <p><span class="value">Lokalizacja</span> <img src="/wp-content/themes/waterbridge/images/icons/filter_ico.svg"/></p>
+                    <p><span class="value">Lokalizacja</span> <img src="/wp-content/themes/waterbridge-prod/images/icons/filter_ico.svg"/></p>
                     <div class="filterDropdown dropdown">
                         <p class="title">Dostępne lokalizacje</p>
                         <?php
@@ -74,7 +74,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="projectsFilter__sort">
-                <p class="projectsFilter__secTitle">Sortuj według: <span>Najnowsze</span> <img src="/wp-content/themes/waterbridge/images/icons/filter_ico.svg"/></p>
+                <p class="projectsFilter__secTitle">Sortuj według: <span>Najnowsze</span> <img src="/wp-content/themes/waterbridge-prod/images/icons/filter_ico.svg"/></p>
             </div>
         </div>
     </section>
@@ -109,7 +109,7 @@ get_header(); ?>
         switch_to_blog(1);
     ?>
     <section class="newsletter">
-        <img class="newsletter__zig" src="/wp-content/themes/waterbridge/images/newsletter_zig.svg"/>
+        <img class="newsletter__zig" src="/wp-content/themes/waterbridge-prod/images/newsletter_zig.svg"/>
         <div class="newsletter__wrap">
             <h2>Nie zanlazłeś intersującej Cię <b>inwestycji</b>?</h2>
             <p>Zapisz się na naszą listę inwestorów i zdobądź pierwszy informację o nowej inwestycji.</p>

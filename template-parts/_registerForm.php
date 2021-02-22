@@ -1,6 +1,6 @@
 <div class="wbRegister__content">
     <div class="popupLogo">
-        <img src="/wp-content/themes/waterbridge/images/logo.svg"/>
+        <img src="/wp-content/themes/waterbridge-prod/images/logo.svg"/>
     </div>
     <div class="popupStep">
         <p>Krok <span>1 z 2</span></p>

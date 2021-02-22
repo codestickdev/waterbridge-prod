@@ -1,6 +1,6 @@
 <section class="investorArea container">
     <div class="investorArea__image">
-        <img src="/wp-content/themes/waterbridge/images/investorarea_iphone2.png" />
+        <img src="/wp-content/themes/waterbridge-prod/images/investorarea_iphone2.png" />
     </div>
     <div class="investorArea__content">
         <div class="wrap">

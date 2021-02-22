@@ -31,7 +31,7 @@ get_header();
         </div>
     </section>
     <section class="projectSimpleStatus container">
-        <div class="projectStatusArrow projectStatusArrow--toBottom"><img src="/wp-content/themes/waterbridge/images/icons/statusBar_arrow.svg"/></div>
+        <div class="projectStatusArrow projectStatusArrow--toBottom"><img src="/wp-content/themes/waterbridge-prod/images/icons/statusBar_arrow.svg"/></div>
         <div class="projectSimpleStatus__bar">
             <div class="projectSimpleStatus__status"></div>
         </div>
@@ -66,7 +66,7 @@ get_header();
                 <p class="status"><span class="total">0</span> / <span class="target"><?php the_field('tile_info_price'); ?></span> PLN</p>
             </div>
             <div class="projectStatusTile__investors">
-                <img src="/wp-content/themes/waterbridge/images/icons/investments_ico.svg"/>
+                <img src="/wp-content/themes/waterbridge-prod/images/icons/investments_ico.svg"/>
                 <p class="investors_count"><span class="investors">0</span> inwestorów</p>
             </div>
         </div>
@@ -79,7 +79,7 @@ get_header();
             ?>
             <li class="projectGallery__image">
                 <div class="overlay">
-                    <img src="/wp-content/themes/waterbridge/images/icons/zoom.svg"/>
+                    <img src="/wp-content/themes/waterbridge-prod/images/icons/zoom.svg"/>
                 </div>
                 <img class="slideimage" src="<?php echo $image; ?>"/>
             </li>
@@ -143,7 +143,7 @@ get_header();
                     <?php endif; ?>
                 </div>
                 <div class="projectInfoSlide__next">
-                    <img src="/wp-content/themes/waterbridge/images/icons/angle_right.svg"/>
+                    <img src="/wp-content/themes/waterbridge-prod/images/icons/angle_right.svg"/>
                 </div>
 
                 <div class="projectInfoSlide__content">
@@ -198,7 +198,7 @@ get_header();
                         <p class="status"><span class="total">0</span> / <span class="target"><?php the_field('tile_info_price'); ?></span> PLN</p>
                     </div>
                     <div class="projectStatusTile__investors">
-                        <img src="/wp-content/themes/waterbridge/images/icons/investments_ico.svg"/>
+                        <img src="/wp-content/themes/waterbridge-prod/images/icons/investments_ico.svg"/>
                         <p class="investors_count"><span class="investors">0</span> inwestorów</p>
                     </div>
                 </div>
@@ -261,11 +261,11 @@ get_header();
                 <p class="status"><span class="total">0</span> / <span class="target"><?php the_field('tile_info_price'); ?></span> PLN</p>
             </div>
             <div class="projectStatusTile__investors">
-                <img src="/wp-content/themes/waterbridge/images/icons/investments_ico.svg"/>
+                <img src="/wp-content/themes/waterbridge-prod/images/icons/investments_ico.svg"/>
                 <p class="investors_count"><span class="investors">0</span> inwestorów</p>
             </div>
         </div>
-        <div class="projectStatusArrow projectStatusArrow--toTop"><img src="/wp-content/themes/waterbridge/images/icons/statusBar_arrow.svg"/></div>
+        <div class="projectStatusArrow projectStatusArrow--toTop"><img src="/wp-content/themes/waterbridge-prod/images/icons/statusBar_arrow.svg"/></div>
         <div class="projectSimpleStatus__bar">
             <div class="projectSimpleStatus__status"></div>
         </div>
@@ -274,7 +274,7 @@ get_header();
         <div class="projectExpert__wrap">
             <h2>Opinia eksperta</h2>
             <div class="projectExpert__person">
-                <img src="/wp-content/themes/waterbridge/images/icons/person_expert.svg"/>
+                <img src="/wp-content/themes/waterbridge-prod/images/icons/person_expert.svg"/>
                 <p class="name">Radosław Parzybroda</p>
                 <p class="position">WaterBridge Expert</p>
             </div>

@@ -2,79 +2,79 @@
 @font-face {
   font-family: "Roboto";
   font-weight: 100;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-Thin.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-Thin.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 100;
   font-style: italic;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-ThinItalic.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-ThinItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 300;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-Light.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 300;
   font-style: italic;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-LightItalic.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-LightItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 400;
   font-style: italic;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-RegularItalic.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-RegularItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 500;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-Medium.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 500;
   font-style: italic;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-MediumItalic.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-MediumItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 700;
   font-style: italic;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-BoldItalic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 900;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-Black.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-Black.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Roboto";
   font-weight: 900;
   font-style: italic;
-  src: url("/wp-content/themes/waterbridge/fonts/Roboto/Roboto-BlackItalic.ttf") format("truetype");
+  src: url("/wp-content/themes/waterbridge-prod/fonts/Roboto/Roboto-BlackItalic.ttf") format("truetype");
 }
 
 body {
@@ -194,7 +194,7 @@ h6 {
 
 .siteHeader__menu .nav-menu li.sign-in a.logged:before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/icons/logged-in_ico.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/logged-in_ico.svg");
   background-size: 17px;
   width: 17px;
   height: 17px;
@@ -528,7 +528,7 @@ h6 {
 }
 
 .pageFooter__menu .menu li.social--facebook a:before {
-  background-image: url("/wp-content/themes/waterbridge/images/icons/facebook_ico.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/facebook_ico.svg");
 }
 
 .pageFooter__menu .menu li.social--instagram:before {
@@ -536,7 +536,7 @@ h6 {
 }
 
 .pageFooter__menu .menu li.social--instagram a:before {
-  background-image: url("/wp-content/themes/waterbridge/images/icons/instagram_ico.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/instagram_ico.svg");
 }
 
 .pageFooter__menu .menu li.sign-in {
@@ -1782,7 +1782,7 @@ h6 {
 
 .wbPopup form .formCheckbox label:after {
   content: '';
-  background-image: url(/wp-content/themes/waterbridge/images/icons/form_checkbox.svg);
+  background-image: url(/wp-content/themes/waterbridge-prod/images/icons/form_checkbox.svg);
   background-size: 20px;
   width: 20px;
   height: 20px;
@@ -1816,7 +1816,7 @@ h6 {
 
 .wbPopup .secureInfo p:before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/icons/lock_ico.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/lock_ico.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   width: 24px;
@@ -1907,7 +1907,7 @@ h6 {
 
 .wbPopup__login form .actionFields .forgot-pass a span:before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/icons/lock_ico.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/lock_ico.svg");
   background-repeat: no-repeat;
   background-size: 24px;
   width: 24px;
@@ -2278,7 +2278,7 @@ h6 {
 
 .wbInvest__input--plus::after, .wbInvest__input--minus::after {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/icons/inputArrow.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/inputArrow.svg");
   background-repeat: no-repeat;
   background-size: 12px;
   width: 12px;
@@ -2511,7 +2511,7 @@ h6 {
 
 .slick-prev:before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/icons/prev_ico.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/prev_ico.svg");
   background-repeat: no-repeat;
   background-size: 29px;
   width: 29px;
@@ -2525,7 +2525,7 @@ h6 {
 
 .slick-next:before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/icons/next_ico.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/next_ico.svg");
   background-repeat: no-repeat;
   background-size: 29px;
   width: 29px;
@@ -2650,7 +2650,7 @@ h6 {
 
 .projectSlider:before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/frontProjects_before.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/frontProjects_before.svg");
   background-repeat: no-repeat;
   background-size: 400px;
   width: 400px;
@@ -2964,7 +2964,7 @@ h6 {
 
 .frontNews__wrap::before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/front_news_bg.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/front_news_bg.svg");
   background-repeat: no-repeat;
   background-size: 35px;
   width: 35px;
@@ -3009,7 +3009,7 @@ h6 {
 
 .frontAbout__container::after {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/front_about_after.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/front_about_after.svg");
   background-repeat: no-repeat;
   background-size: 280px;
   width: 280px;
@@ -3021,7 +3021,7 @@ h6 {
 
 .frontAbout__container::before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/front_about_before.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/front_about_before.svg");
   background-repeat: no-repeat;
   background-size: 220px;
   width: 220px;
@@ -3734,7 +3734,7 @@ h6 {
 
 .investForm__form .checkbox-container .nf-field-element:after {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/icons/form_checkbox.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/icons/form_checkbox.svg");
   background-size: 20px;
   width: 20px;
   height: 20px;
@@ -4154,7 +4154,7 @@ h6 {
 }
 
 .waterbridge--projects {
-  background-image: url("/wp-content/themes/waterbridge/images/projectspage_bg.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/projectspage_bg.svg");
   background-position: top right;
   background-repeat: no-repeat;
 }
@@ -4415,7 +4415,7 @@ h6 {
 
 .projectsFilter__filter .filterRow .filterDropdown .dropdown__checkbox:after {
   content: '';
-  background-image: url(/wp-content/themes/waterbridge/images/icons/form_checkbox.svg);
+  background-image: url(/wp-content/themes/waterbridge-prod/images/icons/form_checkbox.svg);
   background-size: 20px;
   width: 20px;
   height: 20px;
@@ -4597,7 +4597,7 @@ h6 {
 
 .newsletter::before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/newsletter_before.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/newsletter_before.svg");
   background-repeat: no-repeat;
   background-size: 325px;
   width: 325px;
@@ -4610,7 +4610,7 @@ h6 {
 
 .newsletter::after {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/newsletter_after.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/newsletter_after.svg");
   background-repeat: no-repeat;
   background-size: 285px;
   width: 285px;
@@ -5066,7 +5066,7 @@ body.single-projects #masthead {
 
 .projectDescription::before {
   content: '';
-  background-image: url(/wp-content/themes/waterbridge/images/projectDesc_before.svg);
+  background-image: url(/wp-content/themes/waterbridge-prod/images/projectDesc_before.svg);
   background-repeat: no-repeat;
   background-size: 170px;
   width: 170px;
@@ -5491,7 +5491,7 @@ body.single-projects #masthead {
 
 .projectStatus:after {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/projectSteps_zig.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/projectSteps_zig.svg");
   background-repeat: no-repeat;
   background-size: 240px;
   width: 240px;
@@ -5726,7 +5726,7 @@ body.single-projects #masthead {
 
 .projectExpert:before {
   content: '';
-  background-image: url(/wp-content/themes/waterbridge/images/newsletter_before.svg);
+  background-image: url(/wp-content/themes/waterbridge-prod/images/newsletter_before.svg);
   background-repeat: no-repeat;
   background-size: 350px;
   width: 350px;
@@ -5854,7 +5854,7 @@ body.single-projects #masthead {
 
 .projectDocs:before {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/projectSteps_zig.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/projectSteps_zig.svg");
   background-repeat: no-repeat;
   background-size: 240px;
   width: 229px;
@@ -6551,7 +6551,7 @@ a:focus {
 
 .btn--video span:before {
   content: '';
-  background-image: url(/wp-content/themes/waterbridge/images/icons/btn_video_ico.svg);
+  background-image: url(/wp-content/themes/waterbridge-prod/images/icons/btn_video_ico.svg);
   background-repeat: no-repeat;
   background-size: 15px;
   width: 15px;
@@ -6564,7 +6564,7 @@ a:focus {
 
 .btn--download span:before {
   content: '';
-  background-image: url(/wp-content/themes/waterbridge/images/icons/btn_download.svg);
+  background-image: url(/wp-content/themes/waterbridge-prod/images/icons/btn_download.svg);
   background-repeat: no-repeat;
   background-size: 15px;
   width: 15px;
@@ -6662,7 +6662,7 @@ input.btn:hover {
 
 .waterbridge--frontpage::after {
   content: '';
-  background-image: url("/wp-content/themes/waterbridge/images/header_bg.svg");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/header_bg.svg");
   background-repeat: no-repeat;
   background-size: 880px;
   width: 880px;
@@ -6675,14 +6675,14 @@ input.btn:hover {
 }
 
 .waterbridge--subpage {
-  background-image: url("/wp-content/themes/waterbridge/images/subpage_bg.png");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/subpage_bg.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 90%;
 }
 
 .waterbridge--project {
-  background-image: url("/wp-content/themes/waterbridge/images/subpage_bg.png");
+  background-image: url("/wp-content/themes/waterbridge-prod/images/subpage_bg.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 100%;

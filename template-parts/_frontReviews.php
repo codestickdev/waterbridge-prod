@@ -1,7 +1,7 @@
 <section class="frontReviews container<?php if (is_page('o-waterbridge')){echo ' frontReviews--about';}?>">
     <div class="frontReviews__flag">Mówią o nas</div>
     <div class="frontReviews__image">
-        <img src="/wp-content/themes/waterbridge/images/reviews_iphone.png"/>
+        <img src="/wp-content/themes/waterbridge-prod/images/reviews_iphone.png"/>
     </div>
     <div class="frontReviews__content">
         <?php if (is_page('o-waterbridge')):?>

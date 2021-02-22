@@ -1,5 +1,5 @@
 <div class="popupLogo">
-    <img src="/wp-content/themes/waterbridge/images/logo.svg"/>
+    <img src="/wp-content/themes/waterbridge-prod/images/logo.svg"/>
 </div>
 <h3 class="popupTitle">Zaloguj sie do panelu inwestora</h3>
 <?php wb_login_form(); ?>

@@ -59,7 +59,7 @@ get_header();
                         <?php endif; ?>
                     </div>
                     <div class="projectInfoSlide__next">
-                        <img src="/wp-content/themes/waterbridge/images/icons/angle_right.svg"/>
+                        <img src="/wp-content/themes/waterbridge-prod/images/icons/angle_right.svg"/>
                     </div>
 
                     <div class="projectInfoSlide__content">

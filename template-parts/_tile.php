@@ -45,7 +45,7 @@
             <p class="status"><span class="total">0</span> / <span class="target"><?php the_field('tile_info_price'); ?></span> PLN</p>
         </div>
         <div class="tile__financialInfo--investors">
-            <img src="/wp-content/themes/waterbridge/images/icons/investments_ico.svg" />
+            <img src="/wp-content/themes/waterbridge-prod/images/icons/investments_ico.svg" />
             <p><span class="investors">0</span> inwestorów</p>
         </div>
     </div>

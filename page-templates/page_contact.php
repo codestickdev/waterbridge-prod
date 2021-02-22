@@ -13,7 +13,7 @@ get_header(); ?>
         <div class="contactHeading__content">
             <h1>Dział obsługi <b>klienta</b></h1>
             <div class="contactHeading__persons">
-                <img src="/wp-content/themes/waterbridge/images/icons/persons_contact.png"/>
+                <img src="/wp-content/themes/waterbridge-prod/images/icons/persons_contact.png"/>
                 <p class="person">Radosław Parzybroda</p>
                 <p class="position">Starszy konsultant klienta</p>
             </div>

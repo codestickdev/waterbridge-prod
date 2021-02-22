@@ -17,9 +17,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<link rel="stylesheet" href="/wp-content/themes/waterbridge/css/bootstrap/bootstrap.min.css"/>
+	<link rel="stylesheet" href="/wp-content/themes/waterbridge-prod/css/bootstrap/bootstrap.min.css"/>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-	<link rel="stylesheet" type="text/css" href="/wp-content/themes/waterbridge/plugins/slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="/wp-content/themes/waterbridge-prod/plugins/slick/slick.css"/>
 	
 	<?php wp_head(); ?>
 </head>
@@ -50,8 +50,8 @@
 
 	<header id="masthead" class="siteHeader <?php if ( is_front_page() ) : ?>siteHeader--frontPage <?php else: ?>siteHeader--subpage <?php endif; ?>container">
 		<div class="siteHeader__logo">
-			<a href="http://waterbridge.pl/" rel="home" class="logo_dark"><img src="/wp-content/themes/waterbridge/images/logo.svg"/></a>
-			<a href="http://waterbridge.pl/" rel="home" class="logo_white"><img src="/wp-content/themes/waterbridge/images/logo_white.svg"/></a>
+			<a href="http://waterbridge.pl/" rel="home" class="logo_dark"><img src="/wp-content/themes/waterbridge-prod/images/logo.svg"/></a>
+			<a href="http://waterbridge.pl/" rel="home" class="logo_white"><img src="/wp-content/themes/waterbridge-prod/images/logo_white.svg"/></a>
 		</div>
 		<nav id="site-navigation" class="main-navigation siteHeader__menu">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
