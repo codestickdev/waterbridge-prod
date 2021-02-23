@@ -31,7 +31,7 @@ get_header();
         </div>
     </section>
     <section class="projectSimpleStatus container">
-        <div class="projectStatusArrow projectStatusArrow--toBottom"><img src="/wp-content/themes/waterbridge-prod/images/icons/statusBar_arrow.svg"/></div>
+        <div class="projectStatusArrow projectStatusArrow--toBottom projectStatusArrow--maxLeft"><img src="/wp-content/themes/waterbridge-prod/images/icons/statusBar_arrow.svg"/></div>
         <div class="projectSimpleStatus__bar">
             <div class="projectSimpleStatus__status"></div>
         </div>
@@ -265,7 +265,7 @@ get_header();
                 <p class="investors_count"><span class="investors">0</span> inwestorów</p>
             </div>
         </div>
-        <div class="projectStatusArrow projectStatusArrow--toTop"><img src="/wp-content/themes/waterbridge-prod/images/icons/statusBar_arrow.svg"/></div>
+        <div class="projectStatusArrow projectStatusArrow--toTop projectStatusArrow--maxLeft"><img src="/wp-content/themes/waterbridge-prod/images/icons/statusBar_arrow.svg"/></div>
         <div class="projectSimpleStatus__bar">
             <div class="projectSimpleStatus__status"></div>
         </div>
@@ -281,7 +281,9 @@ get_header();
             <div class="projectExpert__content">
                 <p class="quote">“Ceny mieszkań cały czas idą w górę, a chętnych na ich zakup wcale nie brakuje. Wręcz przeciwnie. Inwestycje w nieruchomości stały się najpopularniejszym sposobem lokowania pieniędzy w Polsce”</p>
                 <h3>Masz pytania do naszego eksperta?</h3>
-                <a href="#" class="btn"><span>Skontaktuj się z nami</span></a>
+                <?php switch_to_blog(1); ?>
+                <a href="<?php echo home_url('/kontakt'); ?>" class="btn"><span>Skontaktuj się z nami</span></a>
+                <?php switch_to_blog(2); ?>
             </div>
         </div>
     </section>

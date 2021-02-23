@@ -110,6 +110,9 @@
     &--toTop{
         bottom: -34px;
     }
+    &--maxLeft{
+        overflow: hidden;
+    }
 }
 @media (max-width: 767px){
     .projectStatusArrow{

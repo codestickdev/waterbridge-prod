@@ -434,9 +434,11 @@ $(document).ready(function () {
 
         if(targetPercentformatter >= 15){
             $(this).removeClass('projectStatusTile--maxLeft');
+            $(this).parent().find('.projectStatusArrow').removeClass('projectStatusArrow--maxLeft');
         }
         if(targetPercentformatter >= 84){
             $(this).addClass('projectStatusTile--maxRight');
+            $(this).parent().find('.projectStatusArrow').addClass('projectStatusArrow--maxRight');
         }
     });
 });
@@ -493,11 +495,20 @@ $(document).ready(function(){
             }
         });
     });
-    // $('.filterRow p .dropdown-show').on('click', function(){
-    //     var dropdown = $(this).parent().parent().find('.dropdown');
-    //     dropdown.removeClass('toggle');
-    //     $(this).addClass('dropdown-hide').removeClass('dropdown-show');
-    // });
+    
+    $('.sortBy p img').on('click', function(){
+        $('.filterDropdown').removeClass('toggle');
+
+        var dropdown = $(this).parent().parent().find('.sortBy__dropdown');
+        dropdown.addClass('toggle');
+
+        var wrap = $('.sortBy');
+        $(document).mouseup(function(e){
+            if (!wrap.is(e.target) && wrap.has(e.target).length === 0) {
+                dropdown.removeClass('toggle');
+            }
+        });
+    });
 
     /* Największa i najmniejsza cena */
 
@@ -607,11 +618,26 @@ $(document).ready(function(){
     });
 
 
-    // if ($(".projectList .finded").length == 2){
-    //     $('.projectList').addClass('projectList--twoElements');
-    // }else{
-    //     $('.projectList').removeClass('projectList--twoElements');
-    // }
+    /* Sortowanie */
+
+    var checkbox = $('.sortBy__select input'); 
+
+    $(checkbox).on('click', function(){
+        $(this).parent().parent().find('.in-checked').removeClass('in-checked');
+        $(this).parent().toggleClass('not-checked');
+        $(this).parent().toggleClass('in-checked');
+    });
+});
+
+/* ---- Newsletter checkbox ---- */
+
+$(document).ready(function(){
+    var checkbox = $('.newsletter__checkbox input'); 
+
+    $(checkbox).on('click', function(){
+        $(this).parent().toggleClass('not-checked');
+        $(this).parent().toggleClass('in-checked');
+    });
 });
 
 /* ---- FORM POPUP ---- */
@@ -737,7 +763,7 @@ $(document).ready(function(){
         e.preventDefault();
         fieldName = $(this).attr('field');
         var currentVal = parseInt($(this).siblings('input[name='+fieldName+']').val());
-        if (!isNaN(currentVal) && currentVal >= 101) {
+        if (!isNaN(currentVal)) {
             $(this).siblings('input[name='+fieldName+']').val(currentVal - 1);
         } else {
             $(this).siblings('input[name='+fieldName+']').val(100);
@@ -757,7 +783,6 @@ $(document).ready(function(){
         var currentValueNumber = parseInt(currentValue);
         var calculateWrap = $('.wbInvest__summary .value span');
 
-        if(currentValueNumber > 99){
             var calculation = currentValueNumber * 500;
             var calculationFormatted = $.number(calculation, ' ', ' ', ' ')
             calculateWrap.text(calculationFormatted);
@@ -765,9 +790,6 @@ $(document).ready(function(){
             $('.investValueInput').val(currentValue);
             calculateWrap.text(calculationFormatted);
             $('.wpcf7-submit').removeClass('disable');
-        }else{
-            $('.wpcf7-submit').addClass('disable');
-        }
     });
 });
 

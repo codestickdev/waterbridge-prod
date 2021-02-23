@@ -115,7 +115,7 @@ get_header(); ?>
             <p>Zapisz się na naszą listę inwestorów i zdobądź pierwszy informację o nowej inwestycji.</p>
             <form class="newsletter__form">
                 <input type="email" class="newsletter__mail" placeholder="Twój adres e-mail"/>
-                <div class="newsletter__checkbox">
+                <div class="newsletter__checkbox not-checked">
                     <input type="checkbox" name="checkbox"/>
                     <label for="checkbox">Wyrażam zgodę na przetwarzanie moich danych osobowych w adresu do korespondencji w celu przesyłania mi informacji marketingowych.</label>
                 </div>

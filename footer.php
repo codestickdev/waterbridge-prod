@@ -40,6 +40,10 @@
 				Pellentesque quis ex porta, tristique mi eu, venenatis lacus. Ut in dolor a lorem ultricies feugiat et a lectus.
 				Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
 		</div>
+		<div class="pageFooter__policy">
+			<a href="#">Polityka Prywatności</a>
+			<a href="#">Regulamin</a>
+		</div>
 	</div>
 </footer>
 <div id="wbPopup" class="wbPopup">

@@ -192,6 +192,25 @@
             }
         }
     }
+    &__policy{
+        display: flex;
+        justify-content: center;
+        max-width: fit-content;
+        margin: 30px auto 0;
+        padding-top: 20px;
+        border-top: 1px solid #ffffff1c;
+
+        a{
+            font-size: 14px;
+            color: #fff !important;
+            text-decoration: none;
+            padding: 0 15px;
+
+            &:hover{
+                opacity: .7;
+            }
+        }
+    }
 }
 
 @media (max-width: 991px){
