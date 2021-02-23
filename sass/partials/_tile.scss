@@ -16,10 +16,6 @@
     &--achieved{
         .tile__thumb{
             filter: grayscale(1);
-
-            a{
-                pointer-events: none;
-            }
         }
         .tile__date{
             background-color: #AFAFAF;
@@ -28,15 +24,6 @@
             background-color: #6C6C6C;
             &--current{
                 background-color: #6C6C6C;
-            }
-        }
-        .tile__content{
-            a{
-                pointer-events: none;
-            }
-            .btn{
-                background-color: #AFAFAF;
-                cursor: not-allowed;
             }
         }
     }

@@ -760,10 +760,6 @@ h6 {
           filter: grayscale(1);
 }
 
-.tile--achieved .tile__thumb a {
-  pointer-events: none;
-}
-
 .tile--achieved .tile__date {
   background-color: #AFAFAF;
 }
@@ -774,15 +770,6 @@ h6 {
 
 .tile--achieved .tile__statusBar--current {
   background-color: #6C6C6C;
-}
-
-.tile--achieved .tile__content a {
-  pointer-events: none;
-}
-
-.tile--achieved .tile__content .btn {
-  background-color: #AFAFAF;
-  cursor: not-allowed;
 }
 
 .tile__thumb {
@@ -1036,10 +1023,6 @@ h6 {
           filter: grayscale(1);
 }
 
-.tilePanel--achieved .tilePanel__thumb a {
-  pointer-events: none;
-}
-
 .tilePanel--achieved .tilePanel__date {
   background-color: #AFAFAF;
 }
@@ -1050,15 +1033,6 @@ h6 {
 
 .tilePanel--achieved .tilePanel__statusBar--current {
   background-color: #6C6C6C;
-}
-
-.tilePanel--achieved .tilePanel__content a {
-  pointer-events: none;
-}
-
-.tilePanel--achieved .tilePanel__content .btn {
-  background-color: #AFAFAF;
-  cursor: not-allowed;
 }
 
 .tilePanel--request .tilePanel__date {

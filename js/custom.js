@@ -53,16 +53,6 @@ $(document).ready(function () {
         var investorsum = getInvestorsSum(investors);
         var investorwrap = $(this).find('.investors');
         investorwrap.text(investorsum);
-
-        var statusbar = $(this).find('.tile__statusBar--current');
-        statusbar.css('width', targetPercentformatter + '%');
-
-        if(targetPercentformatter >= 100){
-            $(this).removeClass('tile--active');
-            $(this).addClass('tile--achieved');
-
-            $(this).find('.tile__date').text('Zakończono');
-        }
     });
 });
 
@@ -450,27 +440,14 @@ $(document).ready(function () {
 });
 $(document).ready(function(){
     $('.projectStatusSteps__step').each(function(){
-        var toend = $(this).attr('end');
-        var prev = $(this).prev('.projectStatusSteps__step').attr('end');
-        if(typeof prev == 'undefined'){
-            prev = 0;
+        if($(this).hasClass('projectStatusSteps__step--next')){
+            $(this).find('.projectStatusSteps__status').find('.current').find('span').text('Planowany');
         }
-        var current = $('.projectSimpleStatus--two').find('.projectStatusTile__info').find('.targetPercent').text();
-
-        var toendNum = parseInt(toend);
-        var currentNum = parseInt(current);
-
-        if(currentNum >= toendNum){
-            $(this).addClass('projectStatusSteps__step--end');
-            $(this).find('.projectStatusSteps__status').find('.current').find('span').text('Zrealizowany')
+        if($(this).hasClass('projectStatusSteps__step--current')){
+            $(this).find('.projectStatusSteps__status').find('.current').find('span').text('W trakcie');
         }
-        if(currentNum < toendNum && currentNum >= prev){
-            $(this).addClass('projectStatusSteps__step--current');
-            $(this).find('.projectStatusSteps__status').find('.current').find('span').text('W trakcie')
-        }
-        if(currentNum < toendNum && currentNum < prev){
-            $(this).addClass('projectStatusSteps__step--next');
-            $(this).find('.projectStatusSteps__status').find('.current').find('span').text('Planowany')
+        if($(this).hasClass('projectStatusSteps__step--end')){
+            $(this).find('.projectStatusSteps__status').find('.current').find('span').text('Zrealizowany');
         }
     });
 });
@@ -753,7 +730,7 @@ $(document).ready(function(){
         $('#investValueInputToSend').suffix(" udziałów");
 
         var calculateWrap = $('.wbInvest__summary .value span');
-        var calculation = valAfter * 500;
+        var calculation = valAfter * 1000;
         var calculationFormatted = $.number(calculation, ' ', ' ', ' ')
         calculateWrap.text(calculationFormatted);
         $('.wpcf7-submit').removeClass('disable');
@@ -773,7 +750,7 @@ $(document).ready(function(){
         $('#investValueInputToSend').suffix(" udziałów");
 
         var calculateWrap = $('.wbInvest__summary .value span');
-        var calculation = valAfter * 500;
+        var calculation = valAfter * 1000;
         var calculationFormatted = $.number(calculation, ' ', ' ', ' ')
         calculateWrap.text(calculationFormatted);
         $('.wpcf7-submit').removeClass('disable');
@@ -783,7 +760,7 @@ $(document).ready(function(){
         var currentValueNumber = parseInt(currentValue);
         var calculateWrap = $('.wbInvest__summary .value span');
 
-            var calculation = currentValueNumber * 500;
+            var calculation = currentValueNumber * 1000;
             var calculationFormatted = $.number(calculation, ' ', ' ', ' ')
             calculateWrap.text(calculationFormatted);
 

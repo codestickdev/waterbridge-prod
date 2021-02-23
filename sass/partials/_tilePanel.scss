@@ -16,10 +16,6 @@
     &--achieved{
         .tilePanel__thumb{
             filter: grayscale(1);
-
-            a{
-                pointer-events: none;
-            }
         }
         .tilePanel__date{
             background-color: #AFAFAF;
@@ -28,15 +24,6 @@
             background-color: #6C6C6C;
             &--current{
                 background-color: #6C6C6C;
-            }
-        }
-        .tilePanel__content{
-            a{
-                pointer-events: none;
-            }
-            .btn{
-                background-color: #AFAFAF;
-                cursor: not-allowed;
             }
         }
     }
