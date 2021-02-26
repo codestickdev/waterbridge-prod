@@ -518,30 +518,30 @@ add_action('after_setup_theme', 'remove_admin_bar');
 	}
 }
 
-/**
- * Custom register email
- */
-add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
-function custom_wp_new_user_notification_email( $wp_new_user_notification_email, $user, $blogname ) {
+// /**
+//  * Custom register email
+//  */
+// add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
+// function custom_wp_new_user_notification_email( $wp_new_user_notification_email, $user, $blogname ) {
  
-    $user_login = stripslashes( $user->user_login );
-    $user_email = stripslashes( $user->user_email );
-    $login_url  = home_url('?loginStatus=noLogged');
-    $message  = __( 'Hi there,' ) . "/r/n/r/n";
-    $message .= sprintf( __( "Welcome to %s! Here's how to log in:" ), get_option('blogname') ) . "/r/n/r/n";
-    $message .= $login_url . "/r/n";
-    $message .= sprintf( __('Username: %s'), $user_login ) . "/r/n";
-    $message .= sprintf( __('Email: %s'), $user_email ) . "/r/n";
-    $message .= __( 'Password: The one you entered in the registration form. (For security reason, we save encripted password)' ) . "/r/n/r/n";
-    $message .= sprintf( __('If you have any problems, please contact me at %s.'), get_option('admin_email') ) . "/r/n/r/n";
-    $message .= __( 'bye!' );
+//     $user_login = stripslashes( $user->user_login );
+//     $user_email = stripslashes( $user->user_email );
+//     $login_url  = home_url('?loginStatus=noLogged');
+//     $message  = __( 'Hi there,' ) . "/r/n/r/n";
+//     $message .= sprintf( __( "Welcome to %s! Here's how to log in:" ), get_option('blogname') ) . "/r/n/r/n";
+//     $message .= $login_url . "/r/n";
+//     $message .= sprintf( __('Username: %s'), $user_login ) . "/r/n";
+//     $message .= sprintf( __('Email: %s'), $user_email ) . "/r/n";
+//     $message .= __( 'Password: The one you entered in the registration form. (For security reason, we save encripted password)' ) . "/r/n/r/n";
+//     $message .= sprintf( __('If you have any problems, please contact me at %s.'), get_option('admin_email') ) . "/r/n/r/n";
+//     $message .= __( 'bye!' );
  
-    $wp_new_user_notification_email['subject'] = sprintf( '[%s] Your credentials.', $blogname );
-    $wp_new_user_notification_email['headers'] = array('Content-Type: text/html; charset=UTF-8');
-    $wp_new_user_notification_email['message'] = $message;
+//     $wp_new_user_notification_email['subject'] = sprintf( '[%s] Your credentials.', $blogname );
+//     $wp_new_user_notification_email['headers'] = array('Content-Type: text/html; charset=UTF-8');
+//     $wp_new_user_notification_email['message'] = $message;
  
-    return $wp_new_user_notification_email;
-}
+//     return $wp_new_user_notification_email;
+// }
 
 // Create the custom pages at plugin activation
 
