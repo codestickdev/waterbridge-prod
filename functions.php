@@ -518,30 +518,37 @@ add_action('after_setup_theme', 'remove_admin_bar');
 	}
 }
 
-// /**
-//  * Custom register email
-//  */
-// add_filter( 'wp_new_user_notification_email', 'custom_wp_new_user_notification_email', 10, 3 );
-// function custom_wp_new_user_notification_email( $wp_new_user_notification_email, $user, $blogname ) {
- 
-//     $user_login = stripslashes( $user->user_login );
-//     $user_email = stripslashes( $user->user_email );
-//     $login_url  = home_url('?loginStatus=noLogged');
-//     $message  = __( 'Hi there,' ) . "/r/n/r/n";
-//     $message .= sprintf( __( "Welcome to %s! Here's how to log in:" ), get_option('blogname') ) . "/r/n/r/n";
-//     $message .= $login_url . "/r/n";
-//     $message .= sprintf( __('Username: %s'), $user_login ) . "/r/n";
-//     $message .= sprintf( __('Email: %s'), $user_email ) . "/r/n";
-//     $message .= __( 'Password: The one you entered in the registration form. (For security reason, we save encripted password)' ) . "/r/n/r/n";
-//     $message .= sprintf( __('If you have any problems, please contact me at %s.'), get_option('admin_email') ) . "/r/n/r/n";
-//     $message .= __( 'bye!' );
- 
-//     $wp_new_user_notification_email['subject'] = sprintf( '[%s] Your credentials.', $blogname );
-//     $wp_new_user_notification_email['headers'] = array('Content-Type: text/html; charset=UTF-8');
-//     $wp_new_user_notification_email['message'] = $message;
- 
-//     return $wp_new_user_notification_email;
-// }
+/**
+ * Custom register email
+ */
+function send_welcome_email_to_new_user($user_id) {
+	$user = get_userdata($user_id);
+	$user_email = $user->user_email;
+	// for simplicity, lets assume that user has typed their first and last name when they sign up
+	$user_full_name = $user->user_firstname . $user->user_lastname;
+
+	// Now we are ready to build our welcome email
+	$to = $user_email;
+	$subject = "Hi " . $user_full_name . ", welcome to our site!";
+	$body = '
+				<h1>Dear ' . $user_full_name . ',</h1></br>
+				<p>Thank you for joining our site. Your account is now active.</p>
+				<p>Please go ahead and navigate around your account.</p>
+				<p>Let me know if you have further questions, I am here to help.</p>
+				<p>Enjoy the rest of your day!</p>
+				<p>Kind Regards,</p>
+				<p>poanchen</p>
+	';
+	$headers = array('Content-Type: text/html; charset=UTF-8');
+	if (wp_mail($to, $subject, $body, $headers)) {
+		error_log("email has been successfully sent to user whose email is " . $user_email);
+	}else{
+		error_log("email failed to sent to user whose email is " . $user_email);
+	}
+}
+
+add_action('user_register', 'send_welcome_email_to_new_user');
+
 
 // Create the custom pages at plugin activation
 
