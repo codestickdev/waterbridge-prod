@@ -27,22 +27,11 @@
 			<img src="/wp-content/themes/waterbridge-prod/images/logo_white.svg"/>
 		</div>
 		<div class="pageFooter__content">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisi lectus, tempus sed urna non, dapibus sollicitudin leo.
-				Sed facilisis lacinia odio, nec commodo justo ullamcorper quis. Praesent semper nisi at dolor lobortis, ut tempus lorem maximus.
-				Phasellus posuere volutpat nisi euismod feugiat. Donec lacus mauris, semper eu eros non, blandit interdum dui.
-				Suspendisse eu imperdiet tortor. Etiam non lorem a velit commodo tristique.
-				Vestibulum tempus nibh quam, nec commodo massa posuere at.</p>
-			<p>Suspendisse finibus eros non sapien aliquam tincidunt. Curabitur venenatis non nunc ac tincidunt.
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed facilisis nisi. Etiam luctus elit ac maximus tempus.
-				Sed dapibus enim nec pretium maximus. Etiam id mi eget magna venenatis aliquam. Nunc tincidunt eros in nunc feugiat varius.
-				Integer vestibulum et nisl lacinia feugiat. Vestibulum in massa pellentesque, finibus urna sit amet, molestie nisl.
-				Maecenas at commodo lorem. Nunc non felis imperdiet, auctor arcu et, scelerisque augue. Suspendisse dapibus tortor ut varius tincidunt.
-				Pellentesque quis ex porta, tristique mi eu, venenatis lacus. Ut in dolor a lorem ultricies feugiat et a lectus.
-				Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+			<?php the_field('footer_content', 12); ?>
 		</div>
 		<div class="pageFooter__policy">
-			<a href="#">Polityka Prywatności</a>
-			<a href="#">Regulamin</a>
+			<a href="/polityka-prywatnosci">Polityka Prywatności</a>
+			<a href="/regulamin">Regulamin</a>
 		</div>
 	</div>
 </footer>

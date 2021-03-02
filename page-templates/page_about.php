@@ -16,10 +16,9 @@ get_header(); ?>
             </div>
             <div class="aboutHeader__content">
                 <div class="wrap">
-                    <h1>O <b>WaterBridge</b></h1>
-                    <p>Ceny mieszkań cały czas idą w górę, a chętnych na ich zakup wcale nie brakuje.
-                        Wręcz przeciwnie. Inwestycje w nieruchomości stały się najpopularniejszym sposobem lokowania pieniędzy w Polsce...</p>
-                    <a href="#" class="btn"><span>Poznaj zespół</span></a>
+                    <h1><?php the_field('aboutHeader_title'); ?></b></h1>
+                    <p><?php the_field('aboutHeader_content'); ?></p>
+                    <a href="#aboutTeam" class="btn"><span>Poznaj zespół</span></a>
                 </div>
             </div>
         </div>
@@ -29,7 +28,7 @@ get_header(); ?>
     <?php include get_template_directory() . '/template-parts/_frontReviewsLogo.php'; ?>
 
     <?php if( have_rows('about_team_list') ): ?>
-    <section class="aboutTeam container">
+    <section id="aboutTeam" class="aboutTeam container">
         <div class="aboutTeam__content">
             <h2><?php the_field('about_team_title'); ?></h2>
             <p><?php the_field('about_team_content'); ?></p>

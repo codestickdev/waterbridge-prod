@@ -74,7 +74,7 @@ get_header(); ?>
                 </div>
             </div>
             <div class="projectsFilter__sort">
-                <p class="projectsFilter__secTitle">Sortuj według: <span>Najnowsze</span> <img src="/wp-content/themes/waterbridge-prod/images/icons/filter_ico.svg"/></p>
+                <!-- <p class="projectsFilter__secTitle">Sortuj według: <span>Najnowsze</span> <img src="/wp-content/themes/waterbridge-prod/images/icons/filter_ico.svg"/></p> -->
             </div>
         </div>
     </section>

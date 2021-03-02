@@ -3,6 +3,60 @@
     "title": "O WaterBridge",
     "fields": [
         {
+            "key": "field_603e8b1e0f5da",
+            "label": "Header",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_603e8b260f5db",
+            "label": "Tytuł",
+            "name": "aboutHeader_title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_603e8b390f5dc",
+            "label": "Treść",
+            "name": "aboutHeader_content",
+            "type": "textarea",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "br"
+        },
+        {
             "key": "field_6004d214ca1e2",
             "label": "Współpraca",
             "name": "",
@@ -218,5 +272,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1610930967
+    "modified": 1614711995
 }

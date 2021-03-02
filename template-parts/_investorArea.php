@@ -4,10 +4,10 @@
     </div>
     <div class="investorArea__content">
         <div class="wrap">
-            <h2>Strefa inwestora</h2>
-            <p>Poszukujesz rzetelnych informacji jak inwestować w nieruchomości? Sprawdź nasz poradnik
-                i zacznij swoje <b>pierwsze kroki</b> w inwestycjach.</p>
-            <a href="https://app.waterbirdge.local/" class="btn"><span>Zacznij inwestować</span></a>
+            <h2><?php the_field('frontInvest_title', 12); ?></h2>
+            <p><?php the_field('frontInvest_content', 12); ?></p>
+            <?php $link = get_field('frontInvest_btn', 12); ?>
+            <a href="<?php echo $link['url']; ?>" class="btn"><span><?php echo $link['title']; ?></span></a>
         </div>
     </div>
 </section>

@@ -6,10 +6,9 @@
     </a>
     <div class="ebook__content">
         <div class="wrap">
-            <h2>Pobierz e-book</h2>
-            <p>Poszukujesz rzetelnych informacji jak inwestować w nieruchomości? Sprawdź nasz poradnik
-                i zacznij swoje <b>pierwsze kroki</b> w inwestycjach.</p>
-            <a href="#" class="btn"><span>Pobierz e-book</span></a>
+            <h2><?php the_field('frontEbook_title', 12); ?></h2>
+            <p><?php the_field('frontEbook_content', 12); ?></p>
+            <a href="<?php the_field('frontEbook_btn') ?>" class="btn"><span>Pobierz e-book</span></a>
         </div>
     </div>
     <div class="ebook__image">

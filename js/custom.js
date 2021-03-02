@@ -624,21 +624,23 @@ $(document).ready(function(){
     $('.openPopup-register').find('a').removeAttr('href');
     var popup = $('#wbPopup');
 
-    $('.openPopup-login').on('click', function(){
-        popup.addClass('toggle');
-        popup.find('.wbLogin').addClass('active');
-        setTimeout(function(){
-            popup.find('.wbLogin').addClass('toggle');
-        }, 500);
-    });
-
-    $('.openPopup-register').on('click', function(){
-        popup.addClass('toggle');
-        popup.find('.wbRegister').addClass('active');
-        setTimeout(function(){
-            popup.find('.wbRegister').addClass('toggle');
-        }, 500);
-    });
+    if(!$('body').hasClass('logged-in')){
+        $('.openPopup-login').on('click', function(){
+            popup.addClass('toggle');
+            popup.find('.wbLogin').addClass('active');
+            setTimeout(function(){
+                popup.find('.wbLogin').addClass('toggle');
+            }, 500);
+        });
+    
+        $('.openPopup-register').on('click', function(){
+            popup.addClass('toggle');
+            popup.find('.wbRegister').addClass('active');
+            setTimeout(function(){
+                popup.find('.wbRegister').addClass('toggle');
+            }, 500);
+        });
+    }
 
     $('.openInvestForm').on('click', function(){
         popup.addClass('toggle');
@@ -911,7 +913,9 @@ $(document).ready(function(){
     var footerSignup = $('.pageFooter__menu').find('.sign-up');
 
     if($('body').hasClass('logged-in')){
-        signin.text(username).removeClass('openPopup-login').addClass('logged').attr('href', 'http://app.waterbridge.pl/');
+        signin.parent().removeClass('openPopup-login');
+        signup.parent().removeClass('openPopup-register');
+        signin.text(username).addClass('logged').attr('href', 'http://app.waterbridge.pl/');
         signup.text('Wyloguj się').removeClass('openPopup-register').attr('href', logout);
 
         footerSignin.hide();
