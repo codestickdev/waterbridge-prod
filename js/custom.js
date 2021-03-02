@@ -915,7 +915,7 @@ $(document).ready(function(){
     if($('body').hasClass('logged-in')){
         signin.parent().removeClass('openPopup-login');
         signup.parent().removeClass('openPopup-register');
-        signin.text(username).addClass('logged').attr('href', 'http://app.waterbridge.pl/');
+        signin.text(username).addClass('logged').attr('href', 'https://app.waterbridge.pl/');
         signup.text('Wyloguj się').removeClass('openPopup-register').attr('href', logout);
 
         footerSignin.hide();

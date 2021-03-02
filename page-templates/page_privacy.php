@@ -12,7 +12,7 @@ get_header(); ?>
         </div>
     </section>
     <section class="privacyContent container">
-        <h1>Polityka <b>prywatności</b></h1>
+        <h1><?php the_title(); ?></h1>
         <div class="privacyContent__content">
             <?php the_field('privacy_policy_content'); ?>
         </div>
