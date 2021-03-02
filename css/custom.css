@@ -618,6 +618,10 @@ h6 {
   text-align: center;
 }
 
+.pageFooter__logo img {
+  width: 100%;
+}
+
 .pageFooter__content {
   text-align: center;
 }
@@ -1660,6 +1664,8 @@ h6 {
 
 .wbPopup .popupLogo {
   text-align: center;
+  max-width: 230px;
+  margin: 0 auto;
 }
 
 .wbPopup .popupLogo img {
