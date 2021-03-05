@@ -11,7 +11,7 @@ get_header(); ?>
             <a href="/"><span>Strona główna</span></a> <a><span><?php the_title(); ?></span></a>
         </div>
         <h1>Aktualne <b>projekty</b></h1>
-        <p>Dowiedź się więcje o naszych projektach i dołącz do grona inwestorów.</p>
+        <p><?php the_field('projectList_heading_content'); ?></p>
         <div class="catSelect">
             <button class="catSelect__btn active" select="all">Wszystkie (<span class="all">0</span>)</button>
             <button class="catSelect__btn" select="current">Aktualne (<span class="current">0</span>)</button>
