@@ -274,12 +274,13 @@ get_header();
         <div class="projectExpert__wrap">
             <h2>Opinia eksperta</h2>
             <div class="projectExpert__person">
-                <img src="<?php the_field('projectExpert_image'); ?>"/>
-                <p class="name"><?php the_field('projectExpert_name'); ?></p>
-                <p class="position"><?php the_field('projectExpert_position'); ?></p>
+                <img src="/wp-content/themes/waterbridge-prod/images/icons/person_expert.svg"/>
+                <p class="name">Radosław Parzybroda</p>
+                <p class="position">WaterBridge Expert</p>
             </div>
             <div class="projectExpert__content">
-                <p class="quote">“<?php the_field('projectExpert_quote'); ?>“</h3>
+                <p class="quote">“Ceny mieszkań cały czas idą w górę, a chętnych na ich zakup wcale nie brakuje. Wręcz przeciwnie. Inwestycje w nieruchomości stały się najpopularniejszym sposobem lokowania pieniędzy w Polsce“</p>
+                <h3>Masz pytania do naszego eksperta?</h3>
                 <?php switch_to_blog(1); ?>
                 <a href="<?php echo home_url('/kontakt'); ?>" class="btn"><span>Skontaktuj się z nami</span></a>
                 <?php switch_to_blog(2); ?>
