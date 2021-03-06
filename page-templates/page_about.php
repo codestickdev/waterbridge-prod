@@ -40,7 +40,9 @@ get_header(); ?>
                 $position = get_sub_field('about_team_list_position');
             ?>
             <div class="aboutTeam__person">
-                <img src="<?php echo $image; ?>"/>
+                <div class="image">
+                    <img src="<?php echo $image; ?>"/>
+                </div>
                 <p class="name"><?php echo $name; ?></p>
                 <p class="position"><?php echo $position; ?></p>
             </div>

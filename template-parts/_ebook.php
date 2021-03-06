@@ -8,7 +8,7 @@
         <div class="wrap">
             <h2><?php the_field('frontEbook_title', 12); ?></h2>
             <p><?php the_field('frontEbook_content', 12); ?></p>
-            <a href="<?php the_field('frontEbook_btn') ?>" class="btn"><span>Pobierz e-book</span></a>
+            <a href="<?php the_field('frontebook_file', 12); ?>" target="_blank" class="btn"><span>Pobierz e-book</span></a>
         </div>
     </div>
     <div class="ebook__image">

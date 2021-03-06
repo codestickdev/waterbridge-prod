@@ -54,6 +54,18 @@
             }
         }
     }
+    &--unavailable{
+        .tilePanel__thumb{
+            filter: grayscale(1);
+            pointer-events: none;
+        }
+        .tilePanel__content{
+            a{
+                filter: grayscale(1);
+                pointer-events: none;
+            }
+        }
+    }
 
     &__thumb{
         width: 100%;

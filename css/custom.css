@@ -776,6 +776,18 @@ h6 {
   background-color: #6C6C6C;
 }
 
+.tile--unavailable .tile__thumb {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  pointer-events: none;
+}
+
+.tile--unavailable .tile__content a {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  pointer-events: none;
+}
+
 .tile__thumb {
   width: 100%;
   height: 270px;
@@ -1062,6 +1074,18 @@ h6 {
 
 .tilePanel--accepted .tilePanel__content .requestProcess {
   display: none !important;
+}
+
+.tilePanel--unavailable .tilePanel__thumb {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  pointer-events: none;
+}
+
+.tilePanel--unavailable .tilePanel__content a {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  pointer-events: none;
 }
 
 .tilePanel__thumb {
@@ -5407,7 +5431,8 @@ body.single-projects #masthead {
   display: flex !important;
   background-color: #0D1727;
   height: 530px;
-  min-width: 1045px;
+  max-width: 1045px;
+  width: 100%;
   position: relative;
   z-index: 1 !important;
   outline: none;
@@ -5421,38 +5446,8 @@ body.single-projects #masthead {
   z-index: 2 !important;
 }
 
-.projectInfoSlide__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: calc(100% - 420px);
-}
-
-.projectInfoSlide__content .wrap {
-  max-width: 410px;
-  margin: 0 auto;
-}
-
-.projectInfoSlide__content h2 {
-  font-size: 60px;
-  line-height: 70px;
-  font-weight: 300;
-  margin: 0 0 60px;
-  color: #fff;
-}
-
-.projectInfoSlide__content p {
-  font-size: 16px;
-  line-height: 24px;
-  color: #fff;
-  margin: 0;
-}
-
 .projectInfoSlide__image {
-  width: 420px;
+  width: 100%;
 }
 
 .projectInfoSlide__image img {
@@ -5531,16 +5526,7 @@ body.single-projects #masthead {
 
 @media (max-width: 1199px) {
   .projectInfoSlide {
-    min-width: 950px;
-  }
-  .projectInfoSlide__content {
-    width: calc(100% - 380px);
-  }
-  .projectInfoSlide__content .wrap {
-    max-width: 410px;
-  }
-  .projectInfoSlide__image {
-    width: 380px;
+    max-width: 950px;
   }
 }
 
@@ -5548,7 +5534,7 @@ body.single-projects #masthead {
   .projectInfoSlide {
     min-width: auto;
     width: 750px;
-    height: 400px;
+    height: 500px;
   }
   .projectInfoSlide__dots {
     left: 25px;
@@ -5570,25 +5556,6 @@ body.single-projects #masthead {
     right: 25px;
     top: 20px;
   }
-  .projectInfoSlide__content {
-    width: calc(100% - 300px);
-  }
-  .projectInfoSlide__content .wrap {
-    max-width: 100%;
-    padding: 0 60px;
-  }
-  .projectInfoSlide__content .wrap h2 {
-    font-size: 38px;
-    line-height: 48px;
-    margin: 0 0 30px;
-  }
-  .projectInfoSlide__content .wrap p {
-    font-size: 14px;
-    line-height: 21px;
-  }
-  .projectInfoSlide__image {
-    width: 300px;
-  }
 }
 
 @media (max-width: 767px) {
@@ -5608,16 +5575,6 @@ body.single-projects #masthead {
   }
   .projectInfoSlide__count span {
     display: block;
-  }
-  .projectInfoSlide__image {
-    width: 100%;
-    height: 200px;
-  }
-  .projectInfoSlide__content {
-    width: 100%;
-  }
-  .projectInfoSlide__content .wrap {
-    padding: 80px 50px 50px;
   }
 }
 
@@ -5671,6 +5628,58 @@ body.single-projects #masthead {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projectStatusSteps__nextSlide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 5px 30px;
+  border-radius: 20px;
+  background-color: #c9da30;
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: auto;
+  white-space: nowrap;
+  position: relative;
+  top: auto;
+  cursor: pointer;
+  -webkit-transition: ease .3s;
+  transition: ease .3s;
+}
+
+.projectStatusSteps__nextSlide:hover {
+  opacity: .7;
+}
+
+.projectStatusSteps__nextSlide img {
+  max-width: 10px;
+  -webkit-filter: invert(1) brightness(1) contrast(30);
+          filter: invert(1) brightness(1) contrast(30);
+  margin-left: 10px;
+}
+
+.projectStatusSteps--more {
+  display: block;
+}
+
+.projectStatusSteps--more .projectStatusSteps__step {
+  margin: 0 10px 0 0;
+  outline: none;
+}
+
+.projectStatusSteps__slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .projectStatusSteps__step {
@@ -5684,9 +5693,9 @@ body.single-projects #masthead {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 0 10px;
   padding: 27px 38px;
   min-height: 260px;
+  width: 325px;
 }
 
 .projectStatusSteps__step:first-of-type {
@@ -5760,8 +5769,16 @@ body.single-projects #masthead {
   font-weight: 500;
 }
 
+@media (max-width: 1396px) {
+  .projectStatusSteps__step {
+    width: 275px;
+  }
+}
+
 @media (min-width: 991px) and (max-width: 1199px) {
   .projectStatusSteps__step {
+    width: 230px;
+    min-height: 240px;
     padding: 20px 28px;
   }
   .projectStatusSteps__content h3 {
@@ -5782,6 +5799,15 @@ body.single-projects #masthead {
             flex-direction: column;
     position: relative;
     padding: 0 15px;
+  }
+  .projectStatusSteps--more .projectStatusSteps__step {
+    margin: 0 0 10px;
+  }
+  .projectStatusSteps__nextSlide {
+    display: none;
+  }
+  .projectStatusSteps__slider {
+    display: block;
   }
   .projectStatusSteps__step {
     width: 100% !important;
@@ -5823,11 +5849,12 @@ body.single-projects #masthead {
     right: 25px;
     top: 15px;
     width: 10px !important;
+    height: 97%;
     display: block !important;
   }
   .projectSimpleStatus--mobile .projectSimpleStatus__bar {
     width: 10px;
-    height: 1050px;
+    height: 100%;
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
   }
@@ -6372,15 +6399,24 @@ body.single-projects #masthead {
   text-align: center;
 }
 
-.aboutTeam__person img {
-  max-width: 130px;
+.aboutTeam__person .image {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 20px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.aboutTeam__person .image img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
   -ms-interpolation-mode: nearest-neighbor;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: -moz-crisp-edges;
       image-rendering: -o-pixelated;
       image-rendering: pixelated;
-  margin: 0 auto 20px;
 }
 
 .aboutTeam__person .name {
@@ -6405,8 +6441,9 @@ body.single-projects #masthead {
     line-height: 48px;
     margin: 0 0 20px;
   }
-  .aboutTeam__person img {
-    max-width: 100px;
+  .aboutTeam__person .image {
+    width: 100px;
+    height: 100px;
     margin: 0 auto 15px;
   }
   .aboutTeam__person .name {

@@ -53,6 +53,11 @@ $(document).ready(function () {
         var investorsum = getInvestorsSum(investors);
         var investorwrap = $(this).find('.investors');
         investorwrap.text(investorsum);
+
+        if($(this).hasClass('tile--unavailable')){
+            $(this).find('.tile__date').text('Dostępne wkrótce');
+            $(this).find('a').removeAttr('href');
+        }
     });
 });
 
@@ -91,6 +96,10 @@ $(document).ready(function () {
             $(this).addClass('tilePanel--achieved');
 
             $(this).find('.tilePanel__date').text('Zakończono');
+        }
+        if($(this).hasClass('tilePanel--unavailable')){
+            $(this).find('.tilePanel__date').text('Dostępne wkrótce');
+            $(this).find('a').removeAttr('href');
         }
     });
 });
@@ -228,10 +237,10 @@ $(document).ready(function(){
 
     $('.reviewsDotsSlider').slick({
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         variableWidth: true,
-        centerMode: false,
+        centerMode: true,
         dots: false,
         arrows: true,
         focusOnSelect: true,
@@ -328,23 +337,18 @@ $(document).ready(function(){
             }
         ]
     });
-    // $('.projectInfoSlider').on('swipe', function(event, slick, direction){
-    //     $(this).find('.projectInfoSlide').removeClass('ready');
-    //     $(this).find('.projectInfoSlide.slick-active').next().addClass('ready');
-    //     $(this).find('.projectInfoSlide.slick-active').prev().addClass('ready');
-    // });
-    
-    // $('.projectInfoSlider').on('edge', function(event, slick, direction){
-    //     $(this).find('.projectInfoSlide').removeClass('ready');
-    //     $(this).find('.projectInfoSlide.slick-active').next().addClass('ready');
-    //     $(this).find('.projectInfoSlide.slick-active').prev().addClass('ready');
-    // });
-    
-    // $('.projectInfoSlider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-    //     $(this).find('.projectInfoSlide').removeClass('ready');
-    //     $(this).find('.projectInfoSlide.slick-active').next().addClass('ready');
-    //     $(this).find('.projectInfoSlide.slick-active').prev().addClass('ready');
-    // });
+
+    if($(window).width() > 991){
+        $('.projectStatusSteps__slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            arrows: true,
+            prevArrow: '',
+            nextArrow: $('.projectStatusSteps__nextSlide'),
+        });
+    }
 });
 
 /* PROJECT PAGE

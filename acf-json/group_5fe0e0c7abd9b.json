@@ -195,9 +195,9 @@
             "new_lines": "br"
         },
         {
-            "key": "field_603e880b53c16",
-            "label": "Przycisk",
-            "name": "frontebook_btn",
+            "key": "field_60432ac1f2602",
+            "label": "Plik do pobrania",
+            "name": "frontebook_file",
             "type": "file",
             "instructions": "",
             "required": 1,
@@ -537,5 +537,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1614711242
+    "modified": 1615014776
 }

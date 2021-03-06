@@ -1,4 +1,4 @@
-<article class="tile visible <?php if ($days == 0) : ?>tile--achieved <?php else: ?>tile--active<?php endif; ?>" address="<?php the_field('tile_address'); ?>" targetPrice="<?php the_field('tile_info_price'); ?>" postid="<?php echo get_the_ID(); ?>">
+<article class="tile visible <?php if ($days == 0) : ?>tile--achieved <?php else: ?>tile--active<?php endif; ?><?php if( get_field('tile_unavailable') ): ?> tile--unavailable<?php endif; ?>" address="<?php the_field('tile_address'); ?>" targetPrice="<?php the_field('tile_info_price'); ?>" postid="<?php echo get_the_ID(); ?>">
     
     <div class="tile__thumb">
         <a href="<?php the_permalink(); ?>">
