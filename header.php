@@ -20,7 +20,8 @@
 	<link rel="stylesheet" href="/wp-content/themes/waterbridge-prod/css/bootstrap/bootstrap.min.css"/>
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="/wp-content/themes/waterbridge-prod/plugins/slick/slick.css"/>
-	
+	<link href="/wp-content/themes/waterbridge-prod/plugins/lightbox2/dist/css/lightbox.css" rel="stylesheet" />
+
 	<?php wp_head(); ?>
 </head>
 <?php

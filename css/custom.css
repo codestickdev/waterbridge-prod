@@ -5430,7 +5430,7 @@ body.single-projects #masthead {
   display: -ms-flexbox !important;
   display: flex !important;
   background-color: #0D1727;
-  height: 530px;
+  height: auto;
   max-width: 1045px;
   width: 100%;
   position: relative;
@@ -5534,7 +5534,6 @@ body.single-projects #masthead {
   .projectInfoSlide {
     min-width: auto;
     width: 750px;
-    height: 500px;
   }
   .projectInfoSlide__dots {
     left: 25px;

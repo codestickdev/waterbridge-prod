@@ -461,7 +461,7 @@ body.single-projects{
 .projectInfoSlide{
     display: flex !important;
     background-color: #0D1727;
-    height: 530px;
+    height: auto;
     max-width: 1045px;
     width: 100%;
     position: relative;
@@ -552,7 +552,6 @@ body.single-projects{
     .projectInfoSlide{
         min-width: auto;
         width: 750px;
-        height: 500px;
 
         &__dots{
             left: 25px;
