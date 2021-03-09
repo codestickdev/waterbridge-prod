@@ -4,15 +4,15 @@
         <h2>Nasze biuro</h2>
     </div>
     <div class="contactMap__office">
-        <img src="/wp-content/themes/waterbridge-prod/images/office_image.png" />
+        <img src="<?php the_field('map_officeimage', 135) ?>" />
         <div class="content">
             <p>
                 <b>Waterbridge Sp. z o. o.</b><br />
-                Aleja Prymasa Tysiąclecia 83A lok. 128 02-644 Warszawa<br /><br />
-                Recepcja czynna: pn-pt. 9:00 - 17:00
+                <?php the_field('map_address', 135) ?><br /><br />
+                Recepcja czynna: <?php the_field('map_openHours', 135) ?>
             </p>
         </div>
-        <a href="#" class="btn"><span>Wyznacz trasę</span></a>
+        <a href="<?php the_field('map_maplink', 135) ?>" target="_blank" class="btn"><span>Wyznacz trasę</span></a>
     </div>
     <div class="contactMap__agent container">
         <a href="#" class="btnAgent">
