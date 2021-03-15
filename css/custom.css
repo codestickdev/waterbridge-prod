@@ -436,7 +436,7 @@ h6 {
 }
 
 .pageFooter__wrap {
-  max-width: 1050px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -3069,7 +3069,7 @@ h6 {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: 520px;
+  width: 720px;
   text-align: center;
 }
 
@@ -3255,7 +3255,7 @@ h6 {
 }
 
 .frontReviews .reviewsDotsSlider {
-  max-width: 700px;
+  max-width: 340px;
   margin: 0 auto;
 }
 
@@ -4210,7 +4210,7 @@ h6 {
   line-height: 25px;
   font-weight: 300;
   color: #0D1727;
-  max-width: 385px;
+  max-width: 600px;
   margin: 0 auto;
 }
 

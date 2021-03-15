@@ -240,7 +240,7 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         variableWidth: true,
-        centerMode: true,
+        centerMode: false,
         dots: false,
         arrows: true,
         focusOnSelect: true,
