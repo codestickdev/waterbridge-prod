@@ -462,7 +462,7 @@ function create_account(){
 	$phone = (isset($_POST['registerPhone']) ? $_POST['registerPhone'] : '');
 	$email = (isset($_POST['registerEmail']) ? $_POST['registerEmail'] : '');
 	$pass = (isset($_POST['registerPass']) ? $_POST['registerPass'] : '');
-	$login = $name . $surname;
+	$login = $email;
 
 	if ( !email_exists($email) ) {
 		$userCreate = wp_create_user($login, $pass, $email);
@@ -488,7 +488,6 @@ function create_account(){
 }
 add_action('user_register', 'waterbridge_user_register');
 function waterbridge_user_register($user_id){
-
 	if (!empty($_POST['registerName'])) {
 		update_user_meta($user_id, 'first_name', trim($_POST['registerName']));
 	}
@@ -503,20 +502,27 @@ function auto_login_new_user( $user_id ) {
     wp_set_current_user($user_id);
     wp_set_auth_cookie($user_id);
 	$user_info = get_userdata($user_id);
+
 	$to = $user_info->user_email;
-	$name = $user_info->user_firstname;
+	$body = file_get_contents(get_stylesheet_directory() . '/template-parts/mailtemplate-registeraccount.html');
 	$subject = "[WaterBridge] Rejestracja konta inwestora";
-	$body = '
-				<p><b>Witaj ' . $name . ',</b></p></br>
-				<p>Dziękujemy za rejestrację w serwisie, Twoje konto jest juz aktywne.</p><br/><br/>
-				<p>Pozdrawiamy,</p>
-				<p>Zespół WaterBridge</p>
+
+	$toadmin = get_bloginfo('admin_email');
+	$subject_admin = "[WaterBridge] Zarejestrowano nowe konto inwestora";
+	$body_admin = '
+	<p><b>Witaj,</b></p></br>
+	<p>w witrynie WaterBridge zostało zarejestrowane nowe konto inwestora.</p><br/><br/>
 	';
+
 	$headers = array('Content-Type: text/html; charset=UTF-8');
+
 	if (wp_mail($to, $subject, $body, $headers)) {
 		switch_to_blog(2);
 		wp_redirect( home_url( '/?registerStatus=success' ) );
 		switch_to_blog(1);
+	}
+	if (wp_mail($toadmin, $subject_admin, $body_admin, $headers)){
+
 	}
     exit();
 }
@@ -528,37 +534,6 @@ add_action('after_setup_theme', 'remove_admin_bar');
 		show_admin_bar(false);
 	}
 }
-
-/**
- * Custom register email
- */
-// function send_welcome_email_to_new_user($user_id) {
-// 	$user = get_userdata($user_id);
-// 	$user_email = $user->user_email;
-// 	// for simplicity, lets assume that user has typed their first and last name when they sign up
-// 	$user_full_name = $user->user_firstname . $user->user_lastname;
-
-// 	// Now we are ready to build our welcome email
-// 	$to = $user_email;
-// 	$subject = "Hi " . $user_full_name . ", welcome to our site!";
-// 	$body = '
-// 				<h1>Dear ' . $user_full_name . ',</h1></br>
-// 				<p>Thank you for joining our site. Your account is now active.</p>
-// 				<p>Please go ahead and navigate around your account.</p>
-// 				<p>Let me know if you have further questions, I am here to help.</p>
-// 				<p>Enjoy the rest of your day!</p>
-// 				<p>Kind Regards,</p>
-// 				<p>poanchen</p>
-// 	';
-// 	$headers = array('Content-Type: text/html; charset=UTF-8');
-// 	if (wp_mail($to, $subject, $body, $headers)) {
-// 		error_log("email has been successfully sent to user whose email is " . $user_email);
-// 	}else{
-// 		error_log("email failed to sent to user whose email is " . $user_email);
-// 	}
-// }
-// add_action('user_register', 'send_welcome_email_to_new_user');
-
 
 // Create the custom pages at plugin activation
 
