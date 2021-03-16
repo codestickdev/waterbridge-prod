@@ -830,7 +830,7 @@ $(document).ready(function(){
     }
     if(param == 'noLogged'){
         $('.wbPopup').addClass('toggle');
-        $('.wbPopup').find('.wbLogin').addClass('active');
+        $('.wbPopup').find('.wbLogin').addClass('active').addClass('nologged');;
         setTimeout(function(){
             $('.wbPopup').find('.wbLogin').addClass('toggle');
         }, 500);

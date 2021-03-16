@@ -632,6 +632,7 @@ h6 {
   font-weight: 300;
   color: #fff;
   margin: 0 0 15px;
+  text-align: center !important;
 }
 
 .pageFooter__content p:last-of-type {
@@ -664,12 +665,24 @@ h6 {
   opacity: .7;
 }
 
+@media (max-width: 1500px) {
+  .pageFooter__content {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .pageFooter__content {
+    max-width: 960px;
+  }
+}
+
 @media (max-width: 991px) {
   .pageFooter {
     height: auto;
   }
   .pageFooter__menu {
-    width: 100%;
+    width: 100% !important;
     max-width: 520px;
     margin: 30px auto 0;
   }
@@ -1875,6 +1888,22 @@ h6 {
 
 .wbPopup__login.error #loginform:before {
   content: 'Wprowadzono nieprawidłowy login lub hasło';
+  position: relative;
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  color: #fff;
+  background-color: #cc5050;
+  margin: 10px auto;
+  border-radius: 5px;
+  text-align: center;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.wbPopup__login.nologged #loginform:before {
+  content: 'Aby przejść do projektu musisz się zalogować';
   position: relative;
   display: block;
   padding: 3px 20px;

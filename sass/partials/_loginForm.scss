@@ -18,6 +18,23 @@
             }
         }
     }
+    &.nologged{
+        #loginform{
+            &:before{
+                content: 'Aby przejść do projektu musisz się zalogować';
+                position: relative;
+                display: block;
+                padding: 3px 20px;
+                font-size: 12px;
+                color: #fff;
+                background-color: #cc5050;
+                margin: 10px auto;
+                border-radius: 5px;
+                text-align: center;
+                max-width: fit-content;
+            }
+        }
+    }
     
     form{
         .login-submit{
