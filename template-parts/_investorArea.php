@@ -7,7 +7,11 @@
             <h2><?php the_field('frontInvest_title', 12); ?></h2>
             <p><?php the_field('frontInvest_content', 12); ?></p>
             <?php $link = get_field('frontInvest_btn', 12); ?>
-            <a href="<?php echo $link['url']; ?>" class="btn"><span><?php echo $link['title']; ?></span></a>
+            <?php if(is_user_logged_in()): ?>
+                <a href="<?php echo $link['url']; ?>" class="btn"><span><?php echo $link['title']; ?></span></a>
+            <?php else: ?>
+                <a class="btn openPopup-login"><span><?php echo $link['title']; ?></span></a>
+            <?php endif; ?>
         </div>
     </div>
 </section>

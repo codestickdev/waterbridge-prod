@@ -69,7 +69,7 @@
     }
 
     &__logoSlider{
-        max-width: 200px;
+        max-width: unset;
         margin: 0 auto 50px;
 
         .slick-arrow{
@@ -77,10 +77,10 @@
             z-index: 2;
 
             &.slick-next{
-                right: -12px;
+                right: 50px;
             }
             &.slick-prev{
-                left: -12px;
+                left: 50px;
             }
         }
         .slick-list{
@@ -152,7 +152,8 @@
 @media (max-width: 991px){
     .frontReviewsLogo{
         flex-direction: column;
-        height: 450px;
+        height: auto;
+        padding-bottom: 30px;
 
         &--about{
             height: auto;

@@ -3510,7 +3510,7 @@ h6 {
 }
 
 .frontReviewsLogo__logoSlider {
-  max-width: 200px;
+  max-width: unset;
   margin: 0 auto 50px;
 }
 
@@ -3520,11 +3520,11 @@ h6 {
 }
 
 .frontReviewsLogo__logoSlider .slick-arrow.slick-next {
-  right: -12px;
+  right: 50px;
 }
 
 .frontReviewsLogo__logoSlider .slick-arrow.slick-prev {
-  left: -12px;
+  left: 50px;
 }
 
 .frontReviewsLogo__logoSlider .slick-list {
@@ -3620,7 +3620,8 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 450px;
+    height: auto;
+    padding-bottom: 30px;
   }
   .frontReviewsLogo--about {
     height: auto;
