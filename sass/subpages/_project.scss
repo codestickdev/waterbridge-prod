@@ -115,7 +115,20 @@ body.single-projects{
     z-index: 2;
 
     &--two{
-        margin: 20px auto 200px;
+        margin: 20px auto 150px;
+    }
+    &--steps{
+        .projectStatusTile__info{
+            margin-right: 0;
+
+            p{
+                font-weight: 300;
+
+                b{
+                    font-weight: 500;
+                }
+            }
+        }
     }
 
     &__bar{
@@ -639,10 +652,39 @@ body.single-projects{
             color: #0D1727;
             margin: 0;
             text-align: center;
-            
         }
     }
 }
+.projectStatusContent{
+    margin: 50px auto;
+
+    h2{
+        font-size: 60px;
+        line-height: 70px;
+        font-weight: 300;
+        margin: 0 0 10px;
+        color: #0D1727;
+        text-align: center;
+        
+        b{
+            font-weight: 500;
+        }
+    }
+    p{
+        font-size: 21px;
+        line-height: 25px;
+        color: #0D1727;
+        margin: 0;
+        text-align: center;
+        
+    }
+}
+@media (max-width: 991px){
+    .projectStatusContent{
+        display: none;
+    }
+}
+
 .projectStatusSteps{
     display: flex;
     justify-content: space-between;
@@ -836,6 +878,18 @@ body.single-projects{
         &--two{
             display: none;
         }
+        &--steps{
+            display: block;
+            margin: 20px auto 100px;
+            padding: 0 15px;
+
+            .projectStatusTile{
+                left: 0 !important;
+                right: 0 !important;
+                width: fit-content;
+                margin: 0 auto;
+            }
+        }
         &--mobile{
             position: absolute;
             right: 25px;
@@ -858,6 +912,31 @@ body.single-projects{
                     height: 2000px;
                     left: auto;
                     top: -1990px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .projectSimpleStatus{
+        &--steps{
+            .projectStatusArrow{
+                left: 0 !important;
+                right: 0 !important;
+                margin: 0 auto;
+
+                img{
+                    margin: 0;
+                }
+            }
+            .projectStatusTile{
+                position: absolute;
+                top: 30px !important;
+                max-width: calc(100% - 30px);
+
+                &__info{
+                    width: 100%;
+                    margin: 0;
                 }
             }
         }

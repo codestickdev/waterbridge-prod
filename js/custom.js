@@ -399,40 +399,76 @@ $(document).ready(function () {
 
         /* STATUS BAR */
 
-        var statusbar = $(this).parent().find('.projectSimpleStatus__status');
-        statusbar.css('left', 'calc(' + targetPercentformatter + '% - 20px)');
+        if(wrap.length){
+            var statusbar = $(this).parent().find('.projectSimpleStatus__status');
+            statusbar.css('left', 'calc(' + targetPercentformatter + '% - 20px)');
 
+            var arrowbar = $(this).parent().find('.projectStatusArrow');
+            if(targetPercentformatter == 0){
+                arrowbar.css('left', 'calc(' + targetPercentformatter + '% - 1px)');
+            }
+
+            arrowbar.css('left', targetPercentformatter + '%');
+
+            if(targetPercentformatter >= 100){
+                arrowbar.css('left', 'calc(100% - 1px)');
+            }
+            
+            var infobarWidth = $(this).width() / 1.6;
+
+            var cssValue = 'calc(' + targetPercentformatter + '% - ' + infobarWidth + 'px)';
+            console.log(infobarWidth);
+
+            if(targetPercentformatter >= 16){
+                $(this).css('left', cssValue);
+            }
+            if(targetPercentformatter >= 84){
+                $(this).css('left', 'auto');
+                $(this).css('right', '0');
+            }
+
+            if(targetPercentformatter >= 15){
+                $(this).removeClass('projectStatusTile--maxLeft');
+                $(this).parent().find('.projectStatusArrow').removeClass('projectStatusArrow--maxLeft');
+            }
+            if(targetPercentformatter >= 84){
+                $(this).addClass('projectStatusTile--maxRight');
+                $(this).parent().find('.projectStatusArrow').addClass('projectStatusArrow--maxRight');
+            }
+        }
+    });
+});
+$(document).ready(function(){
+    $('.projectStatusTile--steps').each(function(){
         var arrowbar = $(this).parent().find('.projectStatusArrow');
-        if(targetPercentformatter == 0){
-            arrowbar.css('left', 'calc(' + targetPercentformatter + '% - 1px)');
-        }
+        var allsteps = $('.projectStatusSteps').find('.projectStatusSteps__step').length;
+        var donesteps = $('.projectStatusSteps').find('.projectStatusSteps__step--end').length;
+        var percent = Math.round(((donesteps / allsteps) * 100));
 
-        arrowbar.css('left', targetPercentformatter + '%');
+        $(this).find('.allsteps').text(allsteps);
+        $(this).find('.donesteps').text(donesteps);
 
-        if(targetPercentformatter >= 100){
-            arrowbar.css('left', 'calc(100% - 1px)');
-        }
-        
-        var infobarWidth = $(this).width() / 1.6;
+        arrowbar.css('left', percent + '%');
+        $(this).parent().find('.projectSimpleStatus__bar').find('.projectSimpleStatus__status').css('left', 'calc(' + percent + '% - 20px)');
 
-        var cssValue = 'calc(' + targetPercentformatter + '% - ' + infobarWidth + 'px)';
-        console.log(infobarWidth);
-
-        if(targetPercentformatter >= 16){
-            $(this).css('left', cssValue);
-        }
-        if(targetPercentformatter >= 84){
-            $(this).css('left', 'auto');
-            $(this).css('right', '0');
-        }
-
-        if(targetPercentformatter >= 15){
+        if(percent >= 15){
             $(this).removeClass('projectStatusTile--maxLeft');
             $(this).parent().find('.projectStatusArrow').removeClass('projectStatusArrow--maxLeft');
         }
-        if(targetPercentformatter >= 84){
+        if(percent >= 84){
             $(this).addClass('projectStatusTile--maxRight');
             $(this).parent().find('.projectStatusArrow').addClass('projectStatusArrow--maxRight');
+        }
+
+        var infobarWidth = $(this).width() / 1.6;
+        var cssValue = 'calc(' + percent + '% - ' + infobarWidth + 'px)';
+
+        if(percent >= 16){
+            $(this).css('left', cssValue);
+        }
+        if(percent >= 84){
+            $(this).css('left', 'auto');
+            $(this).css('right', '0');
         }
     });
 });
